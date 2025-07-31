@@ -1,4 +1,5 @@
 import argparse
+from dataclasses import dataclass, field
 from enum import auto, Enum
 from typing import Generator
 from typing import NamedTuple
@@ -33,12 +34,16 @@ class TokenType(Enum):
     IF = auto()
     WHILE = auto()
 
-
-class TokenSpec(NamedTuple):
+@dataclass
+class TokenSpec:
     type: TokenType
     regex: str
     is_keyword: bool = False
     ignore: bool = False
+    comp_regex: re.Pattern = field(init=False)
+
+    def __post_init__(self):
+        self.comp_regex = re.compile(self.regex)
 
 
 TOKEN_SPECS = [
