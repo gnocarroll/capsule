@@ -1,0 +1,3 @@
+function main() -> None
+    print(1 + 1)
+end main
