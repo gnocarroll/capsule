@@ -28,26 +28,16 @@ call_args : '(' ENDLINE*
 // EXPR PARSING
 
 expr :
-    expr call_args #funcCallExpr
-    | expr '[' expr ']' #arrayAccessExpr
-    | expr '->' WORD #arrowAccessExpr
-    | expr '.' WORD #dotAccessExpr
-    | ('*' | '&' | '+' | '-' | '~' | 'not')+ expr #unaryExpr
-    | expr ('**' expr)+ #expExpr
-    | expr (('*' | '/' | '%') expr)+ #multDivModExpr
-    | expr (('+' | '-') expr)+ #addSubExpr
-    | expr (('<<' | '>>') expr)+ #shiftExpr
-    | expr ('&' expr)+ #bitAndExpr
-    | expr ('^' expr)+ #bitXorExpr
-    | expr ('|' expr)+ #bitOrExpr
-    | expr (('<' | '>' | '<=' | '>=') expr)+ #compareExpr
-    | expr (('==' | '!=') expr)+ #eqExpr
-    | expr ('and' expr)+ #andExpr
-    | expr ('or' expr)+ #orExpr
-    |'(' expr ')' #parenExpr
-    | INTEGER #intLiteral
-    | FLOAT #floatLiteral
-    | ident #identExpr
+    sub_expr=expr args=call_args #funcCallExpr
+    | sub_expr=expr '[' index_expr=expr ']' #arrayAccessExpr
+    | sub_expr=expr '->' field=WORD #arrowAccessExpr
+    | sub_expr=expr '.' field=WORD #dotAccessExpr
+    | (op=('*' | '&' | '+' | '-' | '~' | 'not'))+ sub_expr=expr #unaryExpr
+    | lhs=expr (op=binary_op rhs=expr)+ #binaryExpr
+    |'(' sub_expr=expr ')' #parenExpr
+    | value=INTEGER #intLiteral
+    | value=FLOAT #floatLiteral
+    | expr_ident=ident #identExpr
     ;
 
 binary_op :
@@ -90,57 +80,57 @@ in_place_op:
     | '>>=';
 
 statement :
-    statement_no_endline ENDLINE;
+    sub_stmt=statement_no_endline ENDLINE;
 
 statement_no_endline :
-    inc_dec_statement
-    | function_call_statement
-    | if_statement
-    | while_statement
-    | create_var
-    | modify_var
+    sub_stmt=inc_dec_statement #incDecStmt
+    | sub_stmt=function_call_statement #funcCallStmt
+    | sub_stmt=if_statement #ifStmt
+    | sub_stmt=while_statement #whileStmt
+    | sub_stmt=create_var #createVarStmt
+    | sub_stmt=modify_var #modifyVarStmt
     ;
 
 inc_dec_statement :
-    ident ('++' | '--');
+    inc_dec_ident=ident op=('++' | '--');
 
 function_call_statement :
-    expr call_args;
+    sub_expr=expr args=call_args;
 
 if_statement:
-    'if' expr ENDLINE
-        compound_statement
+    'if' if_cond=expr ENDLINE
+        if_body=compound_statement
     (
-    'else' 'if' expr ENDLINE
-        compound_statement
+    'else' 'if' else_if_cond=expr ENDLINE
+        else_if_body=compound_statement
     )*
     (
     'else' ENDLINE
-        compound_statement
+        else_body=compound_statement
     )?
     'end' 'if'
     ;
 
 while_statement :
-    'while' expr ENDLINE
-        compound_statement
+    'while' while_cond=expr ENDLINE
+        while_body=compound_statement
     'end' 'while'
     ;
 
 compound_statement:
-    (statement ENDLINE*)*;
+    (sub_stmt=statement ENDLINE*)*;
 
 
 function_def :
-    'function' WORD function_def_args ENDLINE
-        compound_statement
+    'function' WORD params=function_def_params ENDLINE
+        body=compound_statement
     'end' WORD;
 
-function_def_args :
+function_def_params :
     '(' ENDLINE*
     (
-        create_var
-        (',' ENDLINE* create_var)
+        param=create_var
+        (',' ENDLINE* param=create_var)
         ','?
         ENDLINE*
     )?
@@ -148,29 +138,33 @@ function_def_args :
 
 
 type_variety:
-    'signed' |
-    'unsigned' |
-    'struct';
+    'signed'
+    | 'unsigned'
+    | 'struct';
 
 
 type_literal:
-    type_variety ENDLINE
-        (create_var ENDLINE)*
+    variety=type_variety ENDLINE
+        (field=create_var ENDLINE)*
     'end' WORD
     ;
 
 
 type:
-    type_name | type_literal;
+    name=type_name #typeFromName
+    | literal=type_literal #typeFromLiteral;
 
 
-type_def:
-    type_name WORD 'is' type ENDLINE;
+type_or_alias_def:
+    type_or_alias_tok=('type' | 'alias')
+        name=WORD 'is' assignType=type ENDLINE;
 
 
 definition:
-    function_def |
-    type_def;
+    func=function_def #defIsFunction
+    | type_or_alias=type_or_alias_def #defIsTypeOrAlias
+    | new_var=create_var ENDLINE #defIsVarDef
+    ;
 
 file:
-    definition*;
+    (def=definition)*;
