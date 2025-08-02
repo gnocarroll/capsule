@@ -28,26 +28,27 @@ call_args : '(' ENDLINE*
 // EXPR PARSING
 
 expr :
-    expr call_args |
-    expr '[' expr ']'
-    expr '->' WORD |
-    expr '.' WORD |
-    ('*' | '&' | '+' | '-' | '~' | 'not')+ expr |
-    expr ('**' expr)+ |
-    expr (('*' | '/' | '%') expr)+ |
-    expr (('+' | '-') expr)+ |
-    expr (('<<' | '>>') expr)+ |
-    expr ('&' expr)+ |
-    expr ('^' expr)+ |
-    expr ('|' expr)+ |
-    expr (('<' | '>' | '<=' | '>=') expr)+ |
-    expr (('==' | '!=') expr)+ |
-    expr ('and' expr)+ |
-    expr ('or' expr)+ |
-    '(' expr ')' |
-    INTEGER |
-    FLOAT |
-    ident;
+    expr call_args #funcCallExpr
+    | expr '[' expr ']' #arrayAccessExpr
+    | expr '->' WORD #arrowAccessExpr
+    | expr '.' WORD #dotAccessExpr
+    | ('*' | '&' | '+' | '-' | '~' | 'not')+ expr #unaryExpr
+    | expr ('**' expr)+ #expExpr
+    | expr (('*' | '/' | '%') expr)+ #multDivModExpr
+    | expr (('+' | '-') expr)+ #addSubExpr
+    | expr (('<<' | '>>') expr)+ #shiftExpr
+    | expr ('&' expr)+ #bitAndExpr
+    | expr ('^' expr)+ #bitXorExpr
+    | expr ('|' expr)+ #bitOrExpr
+    | expr (('<' | '>' | '<=' | '>=') expr)+ #compareExpr
+    | expr (('==' | '!=') expr)+ #eqExpr
+    | expr ('and' expr)+ #andExpr
+    | expr ('or' expr)+ #orExpr
+    |'(' expr ')' #parenExpr
+    | INTEGER #intLiteral
+    | FLOAT #floatLiteral
+    | ident #identExpr
+    ;
 
 type_name :
     ident;
