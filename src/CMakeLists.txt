@@ -1,13 +1,17 @@
-add_executable(cap
+target_sources(cap PUBLIC
 	main.cpp
 )
 
-set(SUBDIRS "ast" "parse")
 
-foreach(SUBDIR IN LISTS SUBDIRS)
-	target_include_directories(cap PRIVATE
-		${SUBDIR}
-	)
+target_include_directories(cap PRIVATE
+	ast
+)
 
-	add_subdirectory(${SUBDIR})
-endforeach()
+add_subdirectory(ast)
+
+target_include_directories(cap PRIVATE
+	parse
+)
+
+add_subdirectory(parse)
+
