@@ -1,3 +1,9 @@
 .antlr
+
+# File extensions produced by ANTLR4 while testing it in this dir
+
 *.java
 *.class
+
+*.interp
+*.tokens
