@@ -50,13 +50,28 @@ expr :
     | ident #identExpr
     ;
 
+binary_op :
+    '**'
+    | ('*' | '/' | '%')
+    | ('+' | '-')
+    | ('<<' | '>>')
+    | '&'
+    | '^'
+    | '|'
+    | ('<' | '>' | '<=' | '>=')
+    | ('==' | '!=')
+    | 'and'
+    | 'or'
+    ;
+
 type_name :
     ident;
 
 create_var:
-    WORD ':' type_name |
-    WORD ':' type_name '=' expr |
-    WORD ':=' expr;
+    WORD ':' type_name #createNoExpr
+    | WORD ':' type_name '=' expr #createWithExpr
+    | WORD ':=' expr #createInferType
+    ;
 
 modify_var:
     WORD in_place_op expr;
@@ -75,14 +90,16 @@ in_place_op:
     | '>>=';
 
 statement :
-    (
-        inc_dec_statement |
-        function_call_statement |
-        if_statement |
-        while_statement |
-        create_var |
-        modify_var
-    ) ENDLINE;
+    statement_no_endline ENDLINE;
+
+statement_no_endline :
+    inc_dec_statement
+    | function_call_statement
+    | if_statement
+    | while_statement
+    | create_var
+    | modify_var
+    ;
 
 inc_dec_statement :
     ident ('++' | '--');
