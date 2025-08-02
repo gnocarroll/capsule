@@ -7,7 +7,7 @@ fragment ALPHANUM : [A-Za-z_0-9];
 fragment DIGIT : [0-9];
 fragment EXPONENT : ('e'|'E') ('+'|'-')? DIGIT+ ;
 
-WORD : ALPHA ALPHANUM+;
+WORD : ALPHA ALPHANUM*;
 INTEGER : DIGIT+;
 FLOAT : DIGIT+ '.' DIGIT* (EXPONENT)?
  | '.' DIGIT+ (EXPONENT)?;
@@ -19,7 +19,7 @@ ENDLINE : '\n' | EOF;
 
 // END LEXER RULES
 
-ident : (WORD '::')+ WORD;
+ident : WORD ('::' WORD)*;
 
 call_args : '(' ENDLINE*
     (expr (',' ENDLINE* expr)* ','? ENDLINE*)?
