@@ -21,26 +21,30 @@ ENDLINE : '\n' | EOF;
 
 ident : (namespace=WORD '::')* name=WORD;
 
-call_args : '(' ENDLINE*
+callArgs : '(' ENDLINE*
     (arg=expr (',' ENDLINE* arg=expr)* ','? ENDLINE*)?
 ')';
 
 // EXPR PARSING
 
 expr :
-    sub_expr=expr args=call_args #funcCallExpr
-    | sub_expr=expr '[' index_expr=expr ']' #arrayAccessExpr
-    | sub_expr=expr '->' field=WORD #arrowAccessExpr
-    | sub_expr=expr '.' field=WORD #dotAccessExpr
-    | (op=('*' | '&' | '+' | '-' | '~' | 'not'))+ sub_expr=expr #unaryExpr
-    | lhs=expr (op=binary_op rhs=expr)+ #binaryExpr
-    |'(' sub_expr=expr ')' #parenExpr
+    subExpr=expr endPostfixExpr #postfixExpr
+    | (op=('*' | '&' | '+' | '-' | '~' | 'not'))+ subExpr=expr #unaryExpr
+    | lhs=expr (op=binaryOp rhs=expr)+ #binaryExpr
+    |'(' subExpr=expr ')' #parenExpr
     | value=INTEGER #intLiteral
     | value=FLOAT #floatLiteral
     | expr_ident=ident #identExpr
     ;
 
-binary_op :
+endPostfixExpr :
+    args=callArgs #funcCallExpr
+    | '[' index_expr=expr ']' #arrayAccessExpr
+    | '->' field=WORD #arrowAccessExpr
+    | '.' field=WORD #dotAccessExpr
+    ;
+
+binaryOp :
     '**' #exp
     | ('*' | '/' | '%') #multDivMod
     | ('+' | '-') #addSub
@@ -54,19 +58,22 @@ binary_op :
     | 'or' #logicalOr
     ;
 
-type_name :
+typeName :
     name=ident;
 
-create_var:
-    WORD ':' type_name #createNoExpr
-    | WORD ':' type_name '=' expr #createWithExpr
-    | WORD ':=' expr #createInferType
+createVar:
+    name=WORD typeAndExpr=createVarTypeAndExpr;
+
+createVarTypeAndExpr :
+    ':' typeName ('=' subExpr=expr)?   #createWithType
+    | ':=' subExpr=expr   #createInferType
     ;
 
-modify_var:
-    WORD in_place_op expr;
 
-in_place_op:
+modifyVar:
+    WORD op=inPlaceOp subExpr=expr;
+
+inPlaceOp:
     '+=' #plusEq
     | '-=' #minusEq
     | '*=' #multEq
@@ -81,90 +88,90 @@ in_place_op:
     ;
 
 statement :
-    sub_stmt=statement_no_endline ENDLINE;
+    subStmt=statement_no_endline ENDLINE;
 
 statement_no_endline :
-    sub_stmt=inc_dec_statement #incDecStmt
-    | sub_stmt=function_call_statement #funcCallStmt
-    | sub_stmt=if_statement #ifStmt
-    | sub_stmt=while_statement #whileStmt
-    | sub_stmt=create_var #createVarStmt
-    | sub_stmt=modify_var #modifyVarStmt
+    subStmt=incDecStatement #incDecStmt
+    | subStmt=functionCallStatement #funcCallStmt
+    | subStmt=ifStatement #ifStmt
+    | subStmt=whileStatement #whileStmt
+    | subStmt=createVar #createVarStmt
+    | subStmt=modifyVar #modifyVarStmt
     ;
 
-inc_dec_statement :
-    inc_dec_ident=ident op=('++' | '--');
+incDecStatement :
+    incDecIdent=ident op=('++' | '--');
 
-function_call_statement :
-    sub_expr=expr args=call_args;
+functionCallStatement :
+    subExpr=expr args=callArgs;
 
-if_statement:
+ifStatement:
     'if' if_cond=expr ENDLINE
-        if_body=compound_statement
+        if_body=compoundStatement
     (
     'else' 'if' else_if_cond=expr ENDLINE
-        else_if_body=compound_statement
+        else_if_body=compoundStatement
     )*
     (
     'else' ENDLINE
-        else_body=compound_statement
+        else_body=compoundStatement
     )?
     'end' 'if'
     ;
 
-while_statement :
-    'while' while_cond=expr ENDLINE
-        while_body=compound_statement
+whileStatement :
+    'while' whileCond=expr ENDLINE
+        whileBody=compoundStatement
     'end' 'while'
     ;
 
-compound_statement:
-    (sub_stmt=statement ENDLINE*)*;
+compoundStatement:
+    (subStmt=statement ENDLINE*)*;
 
 
-function_def :
-    'function' WORD params=function_def_params ENDLINE
-        body=compound_statement
+functionDef :
+    'function' WORD params=functionDefParams ENDLINE
+        body=compoundStatement
     'end' WORD;
 
-function_def_params :
+functionDefParams :
     '(' ENDLINE*
     (
-        param=create_var
-        (',' ENDLINE* param=create_var)
+        param=createVar
+        (',' ENDLINE* param=createVar)
         ','?
         ENDLINE*
     )?
     ')';
 
 
-type_variety:
+typeVariety:
     'signed'
     | 'unsigned'
     | 'struct';
 
 
-type_literal:
-    variety=type_variety ENDLINE
-        (field=create_var ENDLINE)*
+typeLiteral:
+    variety=typeVariety ENDLINE
+        (field=createVar ENDLINE)*
     'end' WORD
     ;
 
 
 type:
-    name=type_name #typeFromName
-    | literal=type_literal #typeFromLiteral;
+    name=typeName #typeFromName
+    | literal=typeLiteral #typeFromLiteral;
 
 
-type_or_alias_def:
-    type_or_alias_tok=('type' | 'alias')
+typeOrAliasDef:
+    typeOrAliasTok=('type' | 'alias')
         name=WORD 'is' assignType=type ENDLINE;
 
 
 definition:
-    func=function_def #defIsFunction
-    | type_or_alias=type_or_alias_def #defIsTypeOrAlias
-    | new_var=create_var ENDLINE #defIsVarDef
+    func=functionDef #defIsFunction
+    | type_or_alias=typeOrAliasDef #defIsTypeOrAlias
+    | new_var=createVar ENDLINE #defIsVarDef
     ;
 
 file:
