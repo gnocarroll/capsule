@@ -1,5 +1,8 @@
+type Integer is signed
+end Integer
+
 function main()
-    a := 1
+    a : Integer = 1 + 2 * 3
 
     while a < 10
         a++

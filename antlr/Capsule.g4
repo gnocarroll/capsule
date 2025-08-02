@@ -19,10 +19,10 @@ ENDLINE : '\n' | EOF;
 
 // END LEXER RULES
 
-ident : WORD ('::' WORD)*;
+ident : (namespace=WORD '::')* name=WORD;
 
 call_args : '(' ENDLINE*
-    (expr (',' ENDLINE* expr)* ','? ENDLINE*)?
+    (arg=expr (',' ENDLINE* arg=expr)* ','? ENDLINE*)?
 ')';
 
 // EXPR PARSING
@@ -41,21 +41,21 @@ expr :
     ;
 
 binary_op :
-    '**'
-    | ('*' | '/' | '%')
-    | ('+' | '-')
-    | ('<<' | '>>')
-    | '&'
-    | '^'
-    | '|'
-    | ('<' | '>' | '<=' | '>=')
-    | ('==' | '!=')
-    | 'and'
-    | 'or'
+    '**' #exp
+    | ('*' | '/' | '%') #multDivMod
+    | ('+' | '-') #addSub
+    | ('<<' | '>>') #shift
+    | '&' #bitAnd
+    | '^' #bitXor
+    | '|' #bitOr
+    | ('<' | '>' | '<=' | '>=') #compare
+    | ('==' | '!=') #eqNeq
+    | 'and' #logicalAnd
+    | 'or' #logicalOr
     ;
 
 type_name :
-    ident;
+    name=ident;
 
 create_var:
     WORD ':' type_name #createNoExpr
@@ -67,17 +67,18 @@ modify_var:
     WORD in_place_op expr;
 
 in_place_op:
-    '+='
-    | '-='
-    | '*='
-    | '/='
-    | '%='
-    | '**='
-    | '^='
-    | '|='
-    | '&='
-    | '<<='
-    | '>>=';
+    '+=' #plusEq
+    | '-=' #minusEq
+    | '*=' #multEq
+    | '/=' #divEq
+    | '%=' #modEq
+    | '**=' #expEq
+    | '^=' #xorEq
+    | '|=' #orEq
+    | '&=' #andEq
+    | '<<=' #lShiftEq
+    | '>>=' #rShiftEq
+    ;
 
 statement :
     sub_stmt=statement_no_endline ENDLINE;
@@ -167,4 +168,4 @@ definition:
     ;
 
 file:
-    (def=definition)*;
+    (def=definition ENDLINE*)*;
