@@ -21,18 +21,19 @@ ENDLINE : '\n' | EOF;
 
 ident : (WORD '::')+ WORD;
 
-call_args : expr (',' ENDLINE* expr)* ','? ENDLINE*;
+call_args : '(' ENDLINE*
+    (expr (',' ENDLINE* expr)* ','? ENDLINE*)?
+')';
 
 // EXPR PARSING
 
 expr :
-    expr '(' ENDLINE*
-        call_args?
-    ')' |
+    expr call_args |
     expr '[' expr ']'
     expr '->' WORD |
     expr '.' WORD |
     ('*' | '&' | '+' | '-' | '~' | 'not')+ expr |
+    expr ('**' expr)+ |
     expr (('*' | '/' | '%') expr)+ |
     expr (('+' | '-') expr)+ |
     expr (('<<' | '>>') expr)+ |
@@ -48,13 +49,29 @@ expr :
     FLOAT |
     ident;
 
-type :
+type_name :
     ident;
 
 create_var:
-    WORD ':' type |
-    WORD ':' type '=' expr |
+    WORD ':' type_name |
+    WORD ':' type_name '=' expr |
     WORD ':=' expr;
+
+modify_var:
+    WORD in_place_op expr;
+
+in_place_op:
+    '+='
+    | '-='
+    | '*='
+    | '/='
+    | '%='
+    | '**='
+    | '^='
+    | '|='
+    | '&='
+    | '<<='
+    | '>>=';
 
 statement :
     (
@@ -62,16 +79,15 @@ statement :
         function_call_statement |
         if_statement |
         while_statement |
-        create_var
+        create_var |
+        modify_var
     ) ENDLINE;
 
 inc_dec_statement :
     ident ('++' | '--');
 
 function_call_statement :
-    expr '(' ENDLINE*
-        call_args?
-    ')';
+    expr call_args;
 
 if_statement:
     'if' expr ENDLINE
@@ -111,3 +127,32 @@ function_def_args :
         ENDLINE*
     )?
     ')';
+
+
+type_variety:
+    'signed' |
+    'unsigned' |
+    'struct';
+
+
+type_literal:
+    type_variety ENDLINE
+        (create_var ENDLINE)*
+    'end' WORD
+    ;
+
+
+type:
+    type_name | type_literal;
+
+
+type_def:
+    type_name WORD 'is' type ENDLINE;
+
+
+definition:
+    function_def |
+    type_def;
+
+file:
+    definition*;
