@@ -3,6 +3,7 @@
 
 
 #include "CapsuleListener.h"
+#include "CapsuleVisitor.h"
 
 #include "CapsuleParser.h"
 
@@ -263,6 +264,14 @@ void CapsuleParser::IdentContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitIdent(this);
 }
 
+
+std::any CapsuleParser::IdentContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitIdent(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::IdentContext* CapsuleParser::ident() {
   IdentContext *_localctx = _tracker.createInstance<IdentContext>(_ctx, getState());
   enterRule(_localctx, 0, CapsuleParser::RuleIdent);
@@ -341,6 +350,14 @@ void CapsuleParser::Call_argsContext::exitRule(tree::ParseTreeListener *listener
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitCall_args(this);
+}
+
+
+std::any CapsuleParser::Call_argsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitCall_args(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 CapsuleParser::Call_argsContext* CapsuleParser::call_args() {
@@ -467,6 +484,13 @@ void CapsuleParser::IdentExprContext::exitRule(tree::ParseTreeListener *listener
   if (parserListener != nullptr)
     parserListener->exitIdentExpr(this);
 }
+
+std::any CapsuleParser::IdentExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitIdentExpr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- UnaryExprContext ------------------------------------------------------------------
 
 CapsuleParser::ExprContext* CapsuleParser::UnaryExprContext::expr() {
@@ -484,6 +508,13 @@ void CapsuleParser::UnaryExprContext::exitRule(tree::ParseTreeListener *listener
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitUnaryExpr(this);
+}
+
+std::any CapsuleParser::UnaryExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitUnaryExpr(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- ArrayAccessExprContext ------------------------------------------------------------------
 
@@ -507,6 +538,13 @@ void CapsuleParser::ArrayAccessExprContext::exitRule(tree::ParseTreeListener *li
   if (parserListener != nullptr)
     parserListener->exitArrayAccessExpr(this);
 }
+
+std::any CapsuleParser::ArrayAccessExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitArrayAccessExpr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- IntLiteralContext ------------------------------------------------------------------
 
 tree::TerminalNode* CapsuleParser::IntLiteralContext::INTEGER() {
@@ -525,6 +563,13 @@ void CapsuleParser::IntLiteralContext::exitRule(tree::ParseTreeListener *listene
   if (parserListener != nullptr)
     parserListener->exitIntLiteral(this);
 }
+
+std::any CapsuleParser::IntLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitIntLiteral(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- FloatLiteralContext ------------------------------------------------------------------
 
 tree::TerminalNode* CapsuleParser::FloatLiteralContext::FLOAT() {
@@ -542,6 +587,13 @@ void CapsuleParser::FloatLiteralContext::exitRule(tree::ParseTreeListener *liste
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFloatLiteral(this);
+}
+
+std::any CapsuleParser::FloatLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitFloatLiteral(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- BinaryExprContext ------------------------------------------------------------------
 
@@ -573,6 +625,13 @@ void CapsuleParser::BinaryExprContext::exitRule(tree::ParseTreeListener *listene
   if (parserListener != nullptr)
     parserListener->exitBinaryExpr(this);
 }
+
+std::any CapsuleParser::BinaryExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitBinaryExpr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- FuncCallExprContext ------------------------------------------------------------------
 
 CapsuleParser::ExprContext* CapsuleParser::FuncCallExprContext::expr() {
@@ -594,6 +653,13 @@ void CapsuleParser::FuncCallExprContext::exitRule(tree::ParseTreeListener *liste
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFuncCallExpr(this);
+}
+
+std::any CapsuleParser::FuncCallExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitFuncCallExpr(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- ArrowAccessExprContext ------------------------------------------------------------------
 
@@ -617,6 +683,13 @@ void CapsuleParser::ArrowAccessExprContext::exitRule(tree::ParseTreeListener *li
   if (parserListener != nullptr)
     parserListener->exitArrowAccessExpr(this);
 }
+
+std::any CapsuleParser::ArrowAccessExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitArrowAccessExpr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- DotAccessExprContext ------------------------------------------------------------------
 
 CapsuleParser::ExprContext* CapsuleParser::DotAccessExprContext::expr() {
@@ -639,6 +712,13 @@ void CapsuleParser::DotAccessExprContext::exitRule(tree::ParseTreeListener *list
   if (parserListener != nullptr)
     parserListener->exitDotAccessExpr(this);
 }
+
+std::any CapsuleParser::DotAccessExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitDotAccessExpr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- ParenExprContext ------------------------------------------------------------------
 
 CapsuleParser::ExprContext* CapsuleParser::ParenExprContext::expr() {
@@ -656,6 +736,13 @@ void CapsuleParser::ParenExprContext::exitRule(tree::ParseTreeListener *listener
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitParenExpr(this);
+}
+
+std::any CapsuleParser::ParenExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitParenExpr(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 CapsuleParser::ExprContext* CapsuleParser::expr() {
@@ -920,6 +1007,13 @@ void CapsuleParser::BitAndContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitBitAnd(this);
 }
+
+std::any CapsuleParser::BitAndContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitBitAnd(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- CompareContext ------------------------------------------------------------------
 
 CapsuleParser::CompareContext::CompareContext(Binary_opContext *ctx) { copyFrom(ctx); }
@@ -933,6 +1027,13 @@ void CapsuleParser::CompareContext::exitRule(tree::ParseTreeListener *listener) 
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitCompare(this);
+}
+
+std::any CapsuleParser::CompareContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitCompare(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- MultDivModContext ------------------------------------------------------------------
 
@@ -948,6 +1049,13 @@ void CapsuleParser::MultDivModContext::exitRule(tree::ParseTreeListener *listene
   if (parserListener != nullptr)
     parserListener->exitMultDivMod(this);
 }
+
+std::any CapsuleParser::MultDivModContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitMultDivMod(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- BitXorContext ------------------------------------------------------------------
 
 CapsuleParser::BitXorContext::BitXorContext(Binary_opContext *ctx) { copyFrom(ctx); }
@@ -961,6 +1069,13 @@ void CapsuleParser::BitXorContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitBitXor(this);
+}
+
+std::any CapsuleParser::BitXorContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitBitXor(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- BitOrContext ------------------------------------------------------------------
 
@@ -976,6 +1091,13 @@ void CapsuleParser::BitOrContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitBitOr(this);
 }
+
+std::any CapsuleParser::BitOrContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitBitOr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- ShiftContext ------------------------------------------------------------------
 
 CapsuleParser::ShiftContext::ShiftContext(Binary_opContext *ctx) { copyFrom(ctx); }
@@ -989,6 +1111,13 @@ void CapsuleParser::ShiftContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitShift(this);
+}
+
+std::any CapsuleParser::ShiftContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitShift(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- LogicalAndContext ------------------------------------------------------------------
 
@@ -1004,6 +1133,13 @@ void CapsuleParser::LogicalAndContext::exitRule(tree::ParseTreeListener *listene
   if (parserListener != nullptr)
     parserListener->exitLogicalAnd(this);
 }
+
+std::any CapsuleParser::LogicalAndContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitLogicalAnd(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- AddSubContext ------------------------------------------------------------------
 
 CapsuleParser::AddSubContext::AddSubContext(Binary_opContext *ctx) { copyFrom(ctx); }
@@ -1017,6 +1153,13 @@ void CapsuleParser::AddSubContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitAddSub(this);
+}
+
+std::any CapsuleParser::AddSubContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitAddSub(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- ExpContext ------------------------------------------------------------------
 
@@ -1032,6 +1175,13 @@ void CapsuleParser::ExpContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitExp(this);
 }
+
+std::any CapsuleParser::ExpContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitExp(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- LogicalOrContext ------------------------------------------------------------------
 
 CapsuleParser::LogicalOrContext::LogicalOrContext(Binary_opContext *ctx) { copyFrom(ctx); }
@@ -1046,6 +1196,13 @@ void CapsuleParser::LogicalOrContext::exitRule(tree::ParseTreeListener *listener
   if (parserListener != nullptr)
     parserListener->exitLogicalOr(this);
 }
+
+std::any CapsuleParser::LogicalOrContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitLogicalOr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- EqNeqContext ------------------------------------------------------------------
 
 CapsuleParser::EqNeqContext::EqNeqContext(Binary_opContext *ctx) { copyFrom(ctx); }
@@ -1059,6 +1216,13 @@ void CapsuleParser::EqNeqContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitEqNeq(this);
+}
+
+std::any CapsuleParser::EqNeqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitEqNeq(this);
+  else
+    return visitor->visitChildren(this);
 }
 CapsuleParser::Binary_opContext* CapsuleParser::binary_op() {
   Binary_opContext *_localctx = _tracker.createInstance<Binary_opContext>(_ctx, getState());
@@ -1256,6 +1420,14 @@ void CapsuleParser::Type_nameContext::exitRule(tree::ParseTreeListener *listener
     parserListener->exitType_name(this);
 }
 
+
+std::any CapsuleParser::Type_nameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitType_name(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::Type_nameContext* CapsuleParser::type_name() {
   Type_nameContext *_localctx = _tracker.createInstance<Type_nameContext>(_ctx, getState());
   enterRule(_localctx, 8, CapsuleParser::RuleType_name);
@@ -1323,6 +1495,13 @@ void CapsuleParser::CreateWithExprContext::exitRule(tree::ParseTreeListener *lis
   if (parserListener != nullptr)
     parserListener->exitCreateWithExpr(this);
 }
+
+std::any CapsuleParser::CreateWithExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitCreateWithExpr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- CreateNoExprContext ------------------------------------------------------------------
 
 tree::TerminalNode* CapsuleParser::CreateNoExprContext::WORD() {
@@ -1345,6 +1524,13 @@ void CapsuleParser::CreateNoExprContext::exitRule(tree::ParseTreeListener *liste
   if (parserListener != nullptr)
     parserListener->exitCreateNoExpr(this);
 }
+
+std::any CapsuleParser::CreateNoExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitCreateNoExpr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- CreateInferTypeContext ------------------------------------------------------------------
 
 tree::TerminalNode* CapsuleParser::CreateInferTypeContext::WORD() {
@@ -1366,6 +1552,13 @@ void CapsuleParser::CreateInferTypeContext::exitRule(tree::ParseTreeListener *li
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitCreateInferType(this);
+}
+
+std::any CapsuleParser::CreateInferTypeContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitCreateInferType(this);
+  else
+    return visitor->visitChildren(this);
 }
 CapsuleParser::Create_varContext* CapsuleParser::create_var() {
   Create_varContext *_localctx = _tracker.createInstance<Create_varContext>(_ctx, getState());
@@ -1471,6 +1664,14 @@ void CapsuleParser::Modify_varContext::exitRule(tree::ParseTreeListener *listene
     parserListener->exitModify_var(this);
 }
 
+
+std::any CapsuleParser::Modify_varContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitModify_var(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::Modify_varContext* CapsuleParser::modify_var() {
   Modify_varContext *_localctx = _tracker.createInstance<Modify_varContext>(_ctx, getState());
   enterRule(_localctx, 12, CapsuleParser::RuleModify_var);
@@ -1530,6 +1731,13 @@ void CapsuleParser::PlusEqContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitPlusEq(this);
 }
+
+std::any CapsuleParser::PlusEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitPlusEq(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- LShiftEqContext ------------------------------------------------------------------
 
 CapsuleParser::LShiftEqContext::LShiftEqContext(In_place_opContext *ctx) { copyFrom(ctx); }
@@ -1543,6 +1751,13 @@ void CapsuleParser::LShiftEqContext::exitRule(tree::ParseTreeListener *listener)
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitLShiftEq(this);
+}
+
+std::any CapsuleParser::LShiftEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitLShiftEq(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- MinusEqContext ------------------------------------------------------------------
 
@@ -1558,6 +1773,13 @@ void CapsuleParser::MinusEqContext::exitRule(tree::ParseTreeListener *listener) 
   if (parserListener != nullptr)
     parserListener->exitMinusEq(this);
 }
+
+std::any CapsuleParser::MinusEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitMinusEq(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- RShiftEqContext ------------------------------------------------------------------
 
 CapsuleParser::RShiftEqContext::RShiftEqContext(In_place_opContext *ctx) { copyFrom(ctx); }
@@ -1571,6 +1793,13 @@ void CapsuleParser::RShiftEqContext::exitRule(tree::ParseTreeListener *listener)
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitRShiftEq(this);
+}
+
+std::any CapsuleParser::RShiftEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitRShiftEq(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- XorEqContext ------------------------------------------------------------------
 
@@ -1586,6 +1815,13 @@ void CapsuleParser::XorEqContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitXorEq(this);
 }
+
+std::any CapsuleParser::XorEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitXorEq(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- AndEqContext ------------------------------------------------------------------
 
 CapsuleParser::AndEqContext::AndEqContext(In_place_opContext *ctx) { copyFrom(ctx); }
@@ -1599,6 +1835,13 @@ void CapsuleParser::AndEqContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitAndEq(this);
+}
+
+std::any CapsuleParser::AndEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitAndEq(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- OrEqContext ------------------------------------------------------------------
 
@@ -1614,6 +1857,13 @@ void CapsuleParser::OrEqContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitOrEq(this);
 }
+
+std::any CapsuleParser::OrEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitOrEq(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- ModEqContext ------------------------------------------------------------------
 
 CapsuleParser::ModEqContext::ModEqContext(In_place_opContext *ctx) { copyFrom(ctx); }
@@ -1627,6 +1877,13 @@ void CapsuleParser::ModEqContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitModEq(this);
+}
+
+std::any CapsuleParser::ModEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitModEq(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- ExpEqContext ------------------------------------------------------------------
 
@@ -1642,6 +1899,13 @@ void CapsuleParser::ExpEqContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitExpEq(this);
 }
+
+std::any CapsuleParser::ExpEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitExpEq(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- MultEqContext ------------------------------------------------------------------
 
 CapsuleParser::MultEqContext::MultEqContext(In_place_opContext *ctx) { copyFrom(ctx); }
@@ -1656,6 +1920,13 @@ void CapsuleParser::MultEqContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitMultEq(this);
 }
+
+std::any CapsuleParser::MultEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitMultEq(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- DivEqContext ------------------------------------------------------------------
 
 CapsuleParser::DivEqContext::DivEqContext(In_place_opContext *ctx) { copyFrom(ctx); }
@@ -1669,6 +1940,13 @@ void CapsuleParser::DivEqContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitDivEq(this);
+}
+
+std::any CapsuleParser::DivEqContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitDivEq(this);
+  else
+    return visitor->visitChildren(this);
 }
 CapsuleParser::In_place_opContext* CapsuleParser::in_place_op() {
   In_place_opContext *_localctx = _tracker.createInstance<In_place_opContext>(_ctx, getState());
@@ -1818,6 +2096,14 @@ void CapsuleParser::StatementContext::exitRule(tree::ParseTreeListener *listener
     parserListener->exitStatement(this);
 }
 
+
+std::any CapsuleParser::StatementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitStatement(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::StatementContext* CapsuleParser::statement() {
   StatementContext *_localctx = _tracker.createInstance<StatementContext>(_ctx, getState());
   enterRule(_localctx, 16, CapsuleParser::RuleStatement);
@@ -1879,6 +2165,13 @@ void CapsuleParser::ModifyVarStmtContext::exitRule(tree::ParseTreeListener *list
   if (parserListener != nullptr)
     parserListener->exitModifyVarStmt(this);
 }
+
+std::any CapsuleParser::ModifyVarStmtContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitModifyVarStmt(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- WhileStmtContext ------------------------------------------------------------------
 
 CapsuleParser::While_statementContext* CapsuleParser::WhileStmtContext::while_statement() {
@@ -1896,6 +2189,13 @@ void CapsuleParser::WhileStmtContext::exitRule(tree::ParseTreeListener *listener
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitWhileStmt(this);
+}
+
+std::any CapsuleParser::WhileStmtContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitWhileStmt(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- IfStmtContext ------------------------------------------------------------------
 
@@ -1915,6 +2215,13 @@ void CapsuleParser::IfStmtContext::exitRule(tree::ParseTreeListener *listener) {
   if (parserListener != nullptr)
     parserListener->exitIfStmt(this);
 }
+
+std::any CapsuleParser::IfStmtContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitIfStmt(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- FuncCallStmtContext ------------------------------------------------------------------
 
 CapsuleParser::Function_call_statementContext* CapsuleParser::FuncCallStmtContext::function_call_statement() {
@@ -1932,6 +2239,13 @@ void CapsuleParser::FuncCallStmtContext::exitRule(tree::ParseTreeListener *liste
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFuncCallStmt(this);
+}
+
+std::any CapsuleParser::FuncCallStmtContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitFuncCallStmt(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- CreateVarStmtContext ------------------------------------------------------------------
 
@@ -1951,6 +2265,13 @@ void CapsuleParser::CreateVarStmtContext::exitRule(tree::ParseTreeListener *list
   if (parserListener != nullptr)
     parserListener->exitCreateVarStmt(this);
 }
+
+std::any CapsuleParser::CreateVarStmtContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitCreateVarStmt(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- IncDecStmtContext ------------------------------------------------------------------
 
 CapsuleParser::Inc_dec_statementContext* CapsuleParser::IncDecStmtContext::inc_dec_statement() {
@@ -1968,6 +2289,13 @@ void CapsuleParser::IncDecStmtContext::exitRule(tree::ParseTreeListener *listene
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitIncDecStmt(this);
+}
+
+std::any CapsuleParser::IncDecStmtContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitIncDecStmt(this);
+  else
+    return visitor->visitChildren(this);
 }
 CapsuleParser::Statement_no_endlineContext* CapsuleParser::statement_no_endline() {
   Statement_no_endlineContext *_localctx = _tracker.createInstance<Statement_no_endlineContext>(_ctx, getState());
@@ -2073,6 +2401,14 @@ void CapsuleParser::Inc_dec_statementContext::exitRule(tree::ParseTreeListener *
     parserListener->exitInc_dec_statement(this);
 }
 
+
+std::any CapsuleParser::Inc_dec_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitInc_dec_statement(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::Inc_dec_statementContext* CapsuleParser::inc_dec_statement() {
   Inc_dec_statementContext *_localctx = _tracker.createInstance<Inc_dec_statementContext>(_ctx, getState());
   enterRule(_localctx, 20, CapsuleParser::RuleInc_dec_statement);
@@ -2141,6 +2477,14 @@ void CapsuleParser::Function_call_statementContext::exitRule(tree::ParseTreeList
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFunction_call_statement(this);
+}
+
+
+std::any CapsuleParser::Function_call_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitFunction_call_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 CapsuleParser::Function_call_statementContext* CapsuleParser::function_call_statement() {
@@ -2216,6 +2560,14 @@ void CapsuleParser::If_statementContext::exitRule(tree::ParseTreeListener *liste
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitIf_statement(this);
+}
+
+
+std::any CapsuleParser::If_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitIf_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 CapsuleParser::If_statementContext* CapsuleParser::if_statement() {
@@ -2323,6 +2675,14 @@ void CapsuleParser::While_statementContext::exitRule(tree::ParseTreeListener *li
     parserListener->exitWhile_statement(this);
 }
 
+
+std::any CapsuleParser::While_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitWhile_statement(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::While_statementContext* CapsuleParser::while_statement() {
   While_statementContext *_localctx = _tracker.createInstance<While_statementContext>(_ctx, getState());
   enterRule(_localctx, 26, CapsuleParser::RuleWhile_statement);
@@ -2396,6 +2756,14 @@ void CapsuleParser::Compound_statementContext::exitRule(tree::ParseTreeListener 
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitCompound_statement(this);
+}
+
+
+std::any CapsuleParser::Compound_statementContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitCompound_statement(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 CapsuleParser::Compound_statementContext* CapsuleParser::compound_statement() {
@@ -2487,6 +2855,14 @@ void CapsuleParser::Function_defContext::exitRule(tree::ParseTreeListener *liste
     parserListener->exitFunction_def(this);
 }
 
+
+std::any CapsuleParser::Function_defContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitFunction_def(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::Function_defContext* CapsuleParser::function_def() {
   Function_defContext *_localctx = _tracker.createInstance<Function_defContext>(_ctx, getState());
   enterRule(_localctx, 30, CapsuleParser::RuleFunction_def);
@@ -2562,6 +2938,14 @@ void CapsuleParser::Function_def_paramsContext::exitRule(tree::ParseTreeListener
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFunction_def_params(this);
+}
+
+
+std::any CapsuleParser::Function_def_paramsContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitFunction_def_params(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 CapsuleParser::Function_def_paramsContext* CapsuleParser::function_def_params() {
@@ -2667,6 +3051,14 @@ void CapsuleParser::Type_varietyContext::exitRule(tree::ParseTreeListener *liste
     parserListener->exitType_variety(this);
 }
 
+
+std::any CapsuleParser::Type_varietyContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitType_variety(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::Type_varietyContext* CapsuleParser::type_variety() {
   Type_varietyContext *_localctx = _tracker.createInstance<Type_varietyContext>(_ctx, getState());
   enterRule(_localctx, 34, CapsuleParser::RuleType_variety);
@@ -2749,6 +3141,14 @@ void CapsuleParser::Type_literalContext::exitRule(tree::ParseTreeListener *liste
     parserListener->exitType_literal(this);
 }
 
+
+std::any CapsuleParser::Type_literalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitType_literal(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::Type_literalContext* CapsuleParser::type_literal() {
   Type_literalContext *_localctx = _tracker.createInstance<Type_literalContext>(_ctx, getState());
   enterRule(_localctx, 36, CapsuleParser::RuleType_literal);
@@ -2827,6 +3227,13 @@ void CapsuleParser::TypeFromLiteralContext::exitRule(tree::ParseTreeListener *li
   if (parserListener != nullptr)
     parserListener->exitTypeFromLiteral(this);
 }
+
+std::any CapsuleParser::TypeFromLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitTypeFromLiteral(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- TypeFromNameContext ------------------------------------------------------------------
 
 CapsuleParser::Type_nameContext* CapsuleParser::TypeFromNameContext::type_name() {
@@ -2844,6 +3251,13 @@ void CapsuleParser::TypeFromNameContext::exitRule(tree::ParseTreeListener *liste
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitTypeFromName(this);
+}
+
+std::any CapsuleParser::TypeFromNameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitTypeFromName(this);
+  else
+    return visitor->visitChildren(this);
 }
 CapsuleParser::TypeContext* CapsuleParser::type() {
   TypeContext *_localctx = _tracker.createInstance<TypeContext>(_ctx, getState());
@@ -2927,6 +3341,14 @@ void CapsuleParser::Type_or_alias_defContext::exitRule(tree::ParseTreeListener *
     parserListener->exitType_or_alias_def(this);
 }
 
+
+std::any CapsuleParser::Type_or_alias_defContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitType_or_alias_def(this);
+  else
+    return visitor->visitChildren(this);
+}
+
 CapsuleParser::Type_or_alias_defContext* CapsuleParser::type_or_alias_def() {
   Type_or_alias_defContext *_localctx = _tracker.createInstance<Type_or_alias_defContext>(_ctx, getState());
   enterRule(_localctx, 40, CapsuleParser::RuleType_or_alias_def);
@@ -3005,6 +3427,13 @@ void CapsuleParser::DefIsTypeOrAliasContext::exitRule(tree::ParseTreeListener *l
   if (parserListener != nullptr)
     parserListener->exitDefIsTypeOrAlias(this);
 }
+
+std::any CapsuleParser::DefIsTypeOrAliasContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitDefIsTypeOrAlias(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- DefIsFunctionContext ------------------------------------------------------------------
 
 CapsuleParser::Function_defContext* CapsuleParser::DefIsFunctionContext::function_def() {
@@ -3022,6 +3451,13 @@ void CapsuleParser::DefIsFunctionContext::exitRule(tree::ParseTreeListener *list
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitDefIsFunction(this);
+}
+
+std::any CapsuleParser::DefIsFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitDefIsFunction(this);
+  else
+    return visitor->visitChildren(this);
 }
 //----------------- DefIsVarDefContext ------------------------------------------------------------------
 
@@ -3044,6 +3480,13 @@ void CapsuleParser::DefIsVarDefContext::exitRule(tree::ParseTreeListener *listen
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitDefIsVarDef(this);
+}
+
+std::any CapsuleParser::DefIsVarDefContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitDefIsVarDef(this);
+  else
+    return visitor->visitChildren(this);
 }
 CapsuleParser::DefinitionContext* CapsuleParser::definition() {
   DefinitionContext *_localctx = _tracker.createInstance<DefinitionContext>(_ctx, getState());
@@ -3138,6 +3581,14 @@ void CapsuleParser::FileContext::exitRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFile(this);
+}
+
+
+std::any CapsuleParser::FileContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
+    return parserVisitor->visitFile(this);
+  else
+    return visitor->visitChildren(this);
 }
 
 CapsuleParser::FileContext* CapsuleParser::file() {
