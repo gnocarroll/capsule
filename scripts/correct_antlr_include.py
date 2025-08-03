@@ -39,7 +39,7 @@ def correct_line(line: str) -> str:
 
     toks[1] = "\"antlr4-runtime/antlr4-runtime.h\""
 
-    return " ".join(toks)
+    return " ".join(toks) + "\n"
 
 
 if __name__ == "__main__":

@@ -4,7 +4,8 @@
 #pragma once
 
 
-#include "antlr4-runtime/antlr4-runtime.h"#include "CapsuleVisitor.h"
+#include "antlr4-runtime/antlr4-runtime.h"
+#include "CapsuleVisitor.h"
 
 
 /**
