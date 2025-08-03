@@ -144,6 +144,7 @@
     <ClInclude Include="src\ast\ast.h" />
     <ClInclude Include="src\ast\expr.h" />
     <ClInclude Include="src\ast\function.h" />
+    <ClInclude Include="src\ast\instance.h" />
     <ClInclude Include="src\ast\operator.h" />
     <ClInclude Include="src\ast\scope.h" />
     <ClInclude Include="src\ast\statement.h" />

@@ -22,7 +22,7 @@ struct Operator {
 	Operator(OperatorEnum value) : value(value) {}
 
 	bool operator==(const Operator& other) const {
-		return this->value = other.value;
+		return this->value == other.value;
 	}
 	bool operator==(OperatorEnum value) const {
 		return this->value == value;

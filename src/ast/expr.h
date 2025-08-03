@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <variant>
 
 #include "cap_intdef.h"
@@ -15,8 +16,7 @@ struct ArrayAccessExpr {
 struct MemberAccessExpr {
 	u32 sub_expr;
 
-	u32 field_text_start;
-	u32 field_text_end;
+	std::string field;
 
 	bool is_arrow_access = false;
 };
