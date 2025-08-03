@@ -1,9 +1,11 @@
 #pragma once
 
+#include "cap_intdef.h"
+
 namespace ast {
 
-class Function {
-
+struct Function {
+	static constexpr u32 NO_FUNC = (u32)-1;
 };
 
 }

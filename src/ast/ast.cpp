@@ -2,18 +2,17 @@
 
 #include "antlr4-runtime/ANTLRInputStream.h"
 
-#include "parse/CapsuleBaseVisitor.h"
+#include "ast/ast_builder_visitor.h"
 #include "parse/CapsuleLexer.h"
 #include "parse/CapsuleParser.h"
 
 namespace ast {
 
-class ASTBuilderVisitor final : public CapsuleBaseVisitor {
-public:
-	AST& ast;
-
-	ASTBuilderVisitor(AST& ast) : ast(ast) {}
-};
+AST::AST() {
+	// create / push global scope
+	scopes.emplace_back();
+	types.emplace_back(ErrType());
+}
 
 AST build_ast(std::istream& input) {
 	AST ast;

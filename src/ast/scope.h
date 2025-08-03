@@ -8,7 +8,10 @@
 namespace ast {
 
 struct Scope {
-	u32 parent = 0;
+	static constexpr u32 GLOBAL = (u32)0;
+	static constexpr u32 NO_PARENT = (u32)-1;
+
+	u32 parent = NO_PARENT;
 
 	std::vector<u32> instances;
 	std::vector<u32> types;

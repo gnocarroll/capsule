@@ -13,6 +13,12 @@
 namespace ast {
 
 struct AST {
+	AST();
+
+	u32 curr_func = Function::NO_FUNC;
+
+	u32 curr_scope = Scope::GLOBAL;
+
 	std::vector<Expr> exprs;
 	std::vector<Instance> instances;
 	std::vector<Scope> scopes;
