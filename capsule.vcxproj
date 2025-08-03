@@ -131,6 +131,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\ast\ast.cpp" />
+    <ClCompile Include="src\ast\operator.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\parse\CapsuleBaseListener.cpp" />
     <ClCompile Include="src\parse\CapsuleBaseVisitor.cpp" />
@@ -141,12 +142,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ast\ast.h" />
+    <ClInclude Include="src\ast\expr.h" />
+    <ClInclude Include="src\ast\function.h" />
+    <ClInclude Include="src\ast\operator.h" />
+    <ClInclude Include="src\ast\scope.h" />
+    <ClInclude Include="src\ast\statement.h" />
+    <ClInclude Include="src\ast\type.h" />
     <ClInclude Include="src\parse\CapsuleBaseListener.h" />
     <ClInclude Include="src\parse\CapsuleBaseVisitor.h" />
     <ClInclude Include="src\parse\CapsuleLexer.h" />
     <ClInclude Include="src\parse\CapsuleListener.h" />
     <ClInclude Include="src\parse\CapsuleParser.h" />
     <ClInclude Include="src\parse\CapsuleVisitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\ast\def_operators.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

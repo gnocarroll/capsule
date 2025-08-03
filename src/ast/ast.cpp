@@ -1,7 +1,12 @@
 #include "ast.h"
 
-#include "parse/CapsuleBaseVisitor.cpp"
+namespace ast {
 
 AST build_ast() {
+	AST ast;
+
+
+	return ast;
+}
 
 }

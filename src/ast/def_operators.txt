@@ -1,0 +1,27 @@
+OP(PLUS, "+")
+OP(MINUS, "-")
+
+OP(MULT, "*")
+OP(DIV, "/")
+OP(MOD, "%")
+
+OP(POW, "**")
+
+OP(EQ, "==")
+OP(NEQ, "!=")
+
+OP(LT, "<")
+OP(LE, "<=")
+OP(GT, ">")
+OP(GE, ">=")
+
+OP(NOT, "not")
+OP(AND, "and")
+OP(OR, "or")
+
+OP(BIT_NOT, "~")
+OP(BIT_AND, "&")
+OP(BIT_OR, "|")
+OP(BIT_XOR, "^")
+
+OP(OP_COUNT, "")
