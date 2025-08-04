@@ -1,5 +1,5 @@
 
-// Generated from ../../antlr/Capsule.g4 by ANTLR 4.13.2
+// Generated from C:/Users/George/source/repos/capsule/antlr/Capsule.g4 by ANTLR 4.13.2
 
 #pragma once
 
@@ -101,38 +101,8 @@ public:
   virtual void enterModifyVar(CapsuleParser::ModifyVarContext *ctx) = 0;
   virtual void exitModifyVar(CapsuleParser::ModifyVarContext *ctx) = 0;
 
-  virtual void enterPlusEq(CapsuleParser::PlusEqContext *ctx) = 0;
-  virtual void exitPlusEq(CapsuleParser::PlusEqContext *ctx) = 0;
-
-  virtual void enterMinusEq(CapsuleParser::MinusEqContext *ctx) = 0;
-  virtual void exitMinusEq(CapsuleParser::MinusEqContext *ctx) = 0;
-
-  virtual void enterMultEq(CapsuleParser::MultEqContext *ctx) = 0;
-  virtual void exitMultEq(CapsuleParser::MultEqContext *ctx) = 0;
-
-  virtual void enterDivEq(CapsuleParser::DivEqContext *ctx) = 0;
-  virtual void exitDivEq(CapsuleParser::DivEqContext *ctx) = 0;
-
-  virtual void enterModEq(CapsuleParser::ModEqContext *ctx) = 0;
-  virtual void exitModEq(CapsuleParser::ModEqContext *ctx) = 0;
-
-  virtual void enterExpEq(CapsuleParser::ExpEqContext *ctx) = 0;
-  virtual void exitExpEq(CapsuleParser::ExpEqContext *ctx) = 0;
-
-  virtual void enterXorEq(CapsuleParser::XorEqContext *ctx) = 0;
-  virtual void exitXorEq(CapsuleParser::XorEqContext *ctx) = 0;
-
-  virtual void enterOrEq(CapsuleParser::OrEqContext *ctx) = 0;
-  virtual void exitOrEq(CapsuleParser::OrEqContext *ctx) = 0;
-
-  virtual void enterAndEq(CapsuleParser::AndEqContext *ctx) = 0;
-  virtual void exitAndEq(CapsuleParser::AndEqContext *ctx) = 0;
-
-  virtual void enterLShiftEq(CapsuleParser::LShiftEqContext *ctx) = 0;
-  virtual void exitLShiftEq(CapsuleParser::LShiftEqContext *ctx) = 0;
-
-  virtual void enterRShiftEq(CapsuleParser::RShiftEqContext *ctx) = 0;
-  virtual void exitRShiftEq(CapsuleParser::RShiftEqContext *ctx) = 0;
+  virtual void enterInPlaceOp(CapsuleParser::InPlaceOpContext *ctx) = 0;
+  virtual void exitInPlaceOp(CapsuleParser::InPlaceOpContext *ctx) = 0;
 
   virtual void enterStatement(CapsuleParser::StatementContext *ctx) = 0;
   virtual void exitStatement(CapsuleParser::StatementContext *ctx) = 0;

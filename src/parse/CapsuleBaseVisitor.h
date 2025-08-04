@@ -1,5 +1,5 @@
 
-// Generated from ../../antlr/Capsule.g4 by ANTLR 4.13.2
+// Generated from C:/Users/George/source/repos/capsule/antlr/Capsule.g4 by ANTLR 4.13.2
 
 #pragma once
 
@@ -131,47 +131,7 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual std::any visitPlusEq(CapsuleParser::PlusEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitMinusEq(CapsuleParser::MinusEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitMultEq(CapsuleParser::MultEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitDivEq(CapsuleParser::DivEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitModEq(CapsuleParser::ModEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitExpEq(CapsuleParser::ExpEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitXorEq(CapsuleParser::XorEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitOrEq(CapsuleParser::OrEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitAndEq(CapsuleParser::AndEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitLShiftEq(CapsuleParser::LShiftEqContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
-  virtual std::any visitRShiftEq(CapsuleParser::RShiftEqContext *ctx) override {
+  virtual std::any visitInPlaceOp(CapsuleParser::InPlaceOpContext *ctx) override {
     return visitChildren(ctx);
   }
 

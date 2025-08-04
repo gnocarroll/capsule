@@ -5,15 +5,19 @@
 
 #include "cap_intdef.h"
 #include "operator.h"
+#include "value.h"
 
 namespace ast {
 
-struct ArrayAccessExpr {
+struct ExprBase : Value {
+};
+
+struct ArrayAccessExpr : ExprBase {
 	u32 sub_expr;
 	u32 index_expr;
 };
 
-struct MemberAccessExpr {
+struct MemberAccessExpr : ExprBase {
 	u32 sub_expr;
 
 	std::string field;
@@ -21,20 +25,20 @@ struct MemberAccessExpr {
 	bool is_arrow_access = false;
 };
 
-struct UnaryExpr {
+struct UnaryExpr : ExprBase {
 	u32 sub_expr;
 
 	Operator op;
 };
 
-struct BinaryExpr {
+struct BinaryExpr : ExprBase {
 	u32 lhs;
 	u32 rhs;
 
 	Operator op;
 };
 
-using Expr = std::variant<
+using ExprVariant = std::variant<
 	ArrayAccessExpr,
 	MemberAccessExpr,
 	UnaryExpr,

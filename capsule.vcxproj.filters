@@ -42,7 +42,10 @@
     <ClCompile Include="src\ast\operator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ast\ast_builder_visitor.cpp">
+    <ClCompile Include="src\ast\visitor\ast_builder_visitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ast\visitor\visit_create_var.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,7 +95,16 @@
     <ClInclude Include="src\cap_intdef.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ast\ast_builder_visitor.h">
+    <ClInclude Include="src\ast\visitor\ast_builder_visitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ast\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ast\value.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ast\visitor\visit_create_var.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

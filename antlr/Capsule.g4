@@ -74,17 +74,19 @@ modifyVar:
     WORD op=inPlaceOp subExpr=expr;
 
 inPlaceOp:
-    '+=' #plusEq
-    | '-=' #minusEq
-    | '*=' #multEq
-    | '/=' #divEq
-    | '%=' #modEq
-    | '**=' #expEq
-    | '^=' #xorEq
-    | '|=' #orEq
-    | '&=' #andEq
-    | '<<=' #lShiftEq
-    | '>>=' #rShiftEq
+    op=(
+        '+='
+        | '-='
+        | '*='
+        | '/='
+        | '%='
+        | '**='
+        | '^='
+        | '|='
+        | '&='
+        | '<<='
+        | '>>='
+    )
     ;
 
 statement :
@@ -126,13 +128,14 @@ whileStatement :
     ;
 
 compoundStatement:
+    ENDLINE*
     (subStmt=statement ENDLINE*)*;
 
 
 functionDef :
-    'function' WORD params=functionDefParams ENDLINE
+    'function' name=WORD params=functionDefParams ENDLINE
         body=compoundStatement
-    'end' WORD;
+    'end' endName=WORD;
 
 functionDefParams :
     '(' ENDLINE*
@@ -152,9 +155,9 @@ typeVariety:
 
 
 typeLiteral:
-    variety=typeVariety ENDLINE
-        (field=createVar ENDLINE)*
-    'end' WORD
+    variety=typeVariety ENDLINE+
+        (field=createVar ENDLINE+)*
+    'end' endWord=WORD
     ;
 
 

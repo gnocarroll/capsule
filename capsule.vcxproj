@@ -131,8 +131,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\ast\ast.cpp" />
-    <ClCompile Include="src\ast\ast_builder_visitor.cpp" />
+    <ClCompile Include="src\ast\visitor\ast_builder_visitor.cpp" />
     <ClCompile Include="src\ast\operator.cpp" />
+    <ClCompile Include="src\ast\visitor\visit_create_var.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\parse\CapsuleBaseListener.cpp" />
     <ClCompile Include="src\parse\CapsuleBaseVisitor.cpp" />
@@ -143,7 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ast\ast.h" />
-    <ClInclude Include="src\ast\ast_builder_visitor.h" />
+    <ClInclude Include="src\ast\visitor\ast_builder_visitor.h" />
     <ClInclude Include="src\ast\expr.h" />
     <ClInclude Include="src\ast\function.h" />
     <ClInclude Include="src\ast\instance.h" />
@@ -151,6 +152,9 @@
     <ClInclude Include="src\ast\scope.h" />
     <ClInclude Include="src\ast\statement.h" />
     <ClInclude Include="src\ast\type.h" />
+    <ClInclude Include="src\ast\util.h" />
+    <ClInclude Include="src\ast\value.h" />
+    <ClInclude Include="src\ast\visitor\visit_create_var.h" />
     <ClInclude Include="src\cap_intdef.h" />
     <ClInclude Include="src\parse\CapsuleBaseListener.h" />
     <ClInclude Include="src\parse\CapsuleBaseVisitor.h" />

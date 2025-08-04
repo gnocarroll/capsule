@@ -1,5 +1,5 @@
 
-// Generated from ../../antlr/Capsule.g4 by ANTLR 4.13.2
+// Generated from C:/Users/George/source/repos/capsule/antlr/Capsule.g4 by ANTLR 4.13.2
 
 #pragma once
 
@@ -103,38 +103,8 @@ public:
   virtual void enterModifyVar(CapsuleParser::ModifyVarContext * /*ctx*/) override { }
   virtual void exitModifyVar(CapsuleParser::ModifyVarContext * /*ctx*/) override { }
 
-  virtual void enterPlusEq(CapsuleParser::PlusEqContext * /*ctx*/) override { }
-  virtual void exitPlusEq(CapsuleParser::PlusEqContext * /*ctx*/) override { }
-
-  virtual void enterMinusEq(CapsuleParser::MinusEqContext * /*ctx*/) override { }
-  virtual void exitMinusEq(CapsuleParser::MinusEqContext * /*ctx*/) override { }
-
-  virtual void enterMultEq(CapsuleParser::MultEqContext * /*ctx*/) override { }
-  virtual void exitMultEq(CapsuleParser::MultEqContext * /*ctx*/) override { }
-
-  virtual void enterDivEq(CapsuleParser::DivEqContext * /*ctx*/) override { }
-  virtual void exitDivEq(CapsuleParser::DivEqContext * /*ctx*/) override { }
-
-  virtual void enterModEq(CapsuleParser::ModEqContext * /*ctx*/) override { }
-  virtual void exitModEq(CapsuleParser::ModEqContext * /*ctx*/) override { }
-
-  virtual void enterExpEq(CapsuleParser::ExpEqContext * /*ctx*/) override { }
-  virtual void exitExpEq(CapsuleParser::ExpEqContext * /*ctx*/) override { }
-
-  virtual void enterXorEq(CapsuleParser::XorEqContext * /*ctx*/) override { }
-  virtual void exitXorEq(CapsuleParser::XorEqContext * /*ctx*/) override { }
-
-  virtual void enterOrEq(CapsuleParser::OrEqContext * /*ctx*/) override { }
-  virtual void exitOrEq(CapsuleParser::OrEqContext * /*ctx*/) override { }
-
-  virtual void enterAndEq(CapsuleParser::AndEqContext * /*ctx*/) override { }
-  virtual void exitAndEq(CapsuleParser::AndEqContext * /*ctx*/) override { }
-
-  virtual void enterLShiftEq(CapsuleParser::LShiftEqContext * /*ctx*/) override { }
-  virtual void exitLShiftEq(CapsuleParser::LShiftEqContext * /*ctx*/) override { }
-
-  virtual void enterRShiftEq(CapsuleParser::RShiftEqContext * /*ctx*/) override { }
-  virtual void exitRShiftEq(CapsuleParser::RShiftEqContext * /*ctx*/) override { }
+  virtual void enterInPlaceOp(CapsuleParser::InPlaceOpContext * /*ctx*/) override { }
+  virtual void exitInPlaceOp(CapsuleParser::InPlaceOpContext * /*ctx*/) override { }
 
   virtual void enterStatement(CapsuleParser::StatementContext * /*ctx*/) override { }
   virtual void exitStatement(CapsuleParser::StatementContext * /*ctx*/) override { }

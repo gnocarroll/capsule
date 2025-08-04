@@ -1,5 +1,5 @@
 
-// Generated from ../../antlr/Capsule.g4 by ANTLR 4.13.2
+// Generated from C:/Users/George/source/repos/capsule/antlr/Capsule.g4 by ANTLR 4.13.2
 
 #pragma once
 
@@ -77,27 +77,7 @@ public:
 
     virtual std::any visitModifyVar(CapsuleParser::ModifyVarContext *context) = 0;
 
-    virtual std::any visitPlusEq(CapsuleParser::PlusEqContext *context) = 0;
-
-    virtual std::any visitMinusEq(CapsuleParser::MinusEqContext *context) = 0;
-
-    virtual std::any visitMultEq(CapsuleParser::MultEqContext *context) = 0;
-
-    virtual std::any visitDivEq(CapsuleParser::DivEqContext *context) = 0;
-
-    virtual std::any visitModEq(CapsuleParser::ModEqContext *context) = 0;
-
-    virtual std::any visitExpEq(CapsuleParser::ExpEqContext *context) = 0;
-
-    virtual std::any visitXorEq(CapsuleParser::XorEqContext *context) = 0;
-
-    virtual std::any visitOrEq(CapsuleParser::OrEqContext *context) = 0;
-
-    virtual std::any visitAndEq(CapsuleParser::AndEqContext *context) = 0;
-
-    virtual std::any visitLShiftEq(CapsuleParser::LShiftEqContext *context) = 0;
-
-    virtual std::any visitRShiftEq(CapsuleParser::RShiftEqContext *context) = 0;
+    virtual std::any visitInPlaceOp(CapsuleParser::InPlaceOpContext *context) = 0;
 
     virtual std::any visitStatement(CapsuleParser::StatementContext *context) = 0;
 

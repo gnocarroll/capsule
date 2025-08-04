@@ -1,5 +1,5 @@
 
-// Generated from ../../antlr/Capsule.g4 by ANTLR 4.13.2
+// Generated from C:/Users/George/source/repos/capsule/antlr/Capsule.g4 by ANTLR 4.13.2
 
 
 #include "CapsuleListener.h"
@@ -78,7 +78,7 @@ void capsuleParserInitialize() {
     }
   );
   static const int32_t serializedATNSegment[] = {
-  	4,1,62,322,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
+  	4,1,62,324,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
   	7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,
   	14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,
   	21,2,22,7,22,2,23,7,23,2,24,7,24,1,0,1,0,5,0,53,8,0,10,0,12,0,56,9,0,
@@ -89,104 +89,104 @@ void capsuleParserInitialize() {
   	1,2,4,2,116,8,2,11,2,12,2,117,5,2,120,8,2,10,2,12,2,123,9,2,1,3,1,3,1,
   	3,1,3,1,3,1,3,1,3,1,3,1,3,3,3,134,8,3,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,
   	1,4,1,4,1,4,3,4,147,8,4,1,5,1,5,1,6,1,6,1,6,1,7,1,7,1,7,1,7,3,7,158,8,
-  	7,1,7,1,7,3,7,162,8,7,1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,
-  	1,9,1,9,1,9,3,9,179,8,9,1,10,1,10,1,10,1,11,1,11,1,11,1,11,1,11,1,11,
-  	3,11,190,8,11,1,12,1,12,1,12,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,
-  	1,14,1,14,1,14,1,14,1,14,5,14,208,8,14,10,14,12,14,211,9,14,1,14,1,14,
-  	1,14,3,14,216,8,14,1,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,1,15,1,15,
-  	1,16,1,16,5,16,230,8,16,10,16,12,16,233,9,16,5,16,235,8,16,10,16,12,16,
-  	238,9,16,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,18,1,18,5,18,250,8,
-  	18,10,18,12,18,253,9,18,1,18,1,18,1,18,5,18,258,8,18,10,18,12,18,261,
-  	9,18,1,18,1,18,1,18,3,18,266,8,18,1,18,5,18,269,8,18,10,18,12,18,272,
-  	9,18,3,18,274,8,18,1,18,1,18,1,19,1,19,1,20,1,20,1,20,1,20,1,20,5,20,
-  	285,8,20,10,20,12,20,288,9,20,1,20,1,20,1,20,1,21,1,21,3,21,295,8,21,
-  	1,22,1,22,1,22,1,22,1,22,1,22,1,23,1,23,1,23,1,23,1,23,3,23,308,8,23,
-  	1,24,1,24,5,24,312,8,24,10,24,12,24,315,9,24,5,24,317,8,24,10,24,12,24,
-  	320,9,24,1,24,0,1,4,25,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,
-  	34,36,38,40,42,44,46,48,0,9,1,0,5,10,2,0,5,5,16,17,1,0,7,8,1,0,18,19,
-  	1,0,22,25,1,0,26,27,1,0,44,45,1,0,51,53,1,0,54,55,356,0,54,1,0,0,0,2,
-  	59,1,0,0,0,4,107,1,0,0,0,6,133,1,0,0,0,8,146,1,0,0,0,10,148,1,0,0,0,12,
-  	150,1,0,0,0,14,161,1,0,0,0,16,163,1,0,0,0,18,178,1,0,0,0,20,180,1,0,0,
-  	0,22,189,1,0,0,0,24,191,1,0,0,0,26,194,1,0,0,0,28,197,1,0,0,0,30,220,
-  	1,0,0,0,32,236,1,0,0,0,34,239,1,0,0,0,36,247,1,0,0,0,38,277,1,0,0,0,40,
-  	279,1,0,0,0,42,294,1,0,0,0,44,296,1,0,0,0,46,307,1,0,0,0,48,318,1,0,0,
-  	0,50,51,5,57,0,0,51,53,5,1,0,0,52,50,1,0,0,0,53,56,1,0,0,0,54,52,1,0,
-  	0,0,54,55,1,0,0,0,55,57,1,0,0,0,56,54,1,0,0,0,57,58,5,57,0,0,58,1,1,0,
-  	0,0,59,63,5,2,0,0,60,62,5,62,0,0,61,60,1,0,0,0,62,65,1,0,0,0,63,61,1,
-  	0,0,0,63,64,1,0,0,0,64,89,1,0,0,0,65,63,1,0,0,0,66,77,3,4,2,0,67,71,5,
-  	3,0,0,68,70,5,62,0,0,69,68,1,0,0,0,70,73,1,0,0,0,71,69,1,0,0,0,71,72,
-  	1,0,0,0,72,74,1,0,0,0,73,71,1,0,0,0,74,76,3,4,2,0,75,67,1,0,0,0,76,79,
-  	1,0,0,0,77,75,1,0,0,0,77,78,1,0,0,0,78,81,1,0,0,0,79,77,1,0,0,0,80,82,
-  	5,3,0,0,81,80,1,0,0,0,81,82,1,0,0,0,82,86,1,0,0,0,83,85,5,62,0,0,84,83,
-  	1,0,0,0,85,88,1,0,0,0,86,84,1,0,0,0,86,87,1,0,0,0,87,90,1,0,0,0,88,86,
-  	1,0,0,0,89,66,1,0,0,0,89,90,1,0,0,0,90,91,1,0,0,0,91,92,5,4,0,0,92,3,
-  	1,0,0,0,93,95,6,2,-1,0,94,96,7,0,0,0,95,94,1,0,0,0,96,97,1,0,0,0,97,95,
-  	1,0,0,0,97,98,1,0,0,0,98,99,1,0,0,0,99,108,3,4,2,6,100,101,5,2,0,0,101,
-  	102,3,4,2,0,102,103,5,4,0,0,103,108,1,0,0,0,104,108,5,58,0,0,105,108,
-  	5,59,0,0,106,108,3,0,0,0,107,93,1,0,0,0,107,100,1,0,0,0,107,104,1,0,0,
-  	0,107,105,1,0,0,0,107,106,1,0,0,0,108,121,1,0,0,0,109,110,10,7,0,0,110,
-  	120,3,6,3,0,111,115,10,5,0,0,112,113,3,8,4,0,113,114,3,4,2,0,114,116,
-  	1,0,0,0,115,112,1,0,0,0,116,117,1,0,0,0,117,115,1,0,0,0,117,118,1,0,0,
-  	0,118,120,1,0,0,0,119,109,1,0,0,0,119,111,1,0,0,0,120,123,1,0,0,0,121,
-  	119,1,0,0,0,121,122,1,0,0,0,122,5,1,0,0,0,123,121,1,0,0,0,124,134,3,2,
-  	1,0,125,126,5,11,0,0,126,127,3,4,2,0,127,128,5,12,0,0,128,134,1,0,0,0,
-  	129,130,5,13,0,0,130,134,5,57,0,0,131,132,5,14,0,0,132,134,5,57,0,0,133,
-  	124,1,0,0,0,133,125,1,0,0,0,133,129,1,0,0,0,133,131,1,0,0,0,134,7,1,0,
-  	0,0,135,147,5,15,0,0,136,147,7,1,0,0,137,147,7,2,0,0,138,147,7,3,0,0,
-  	139,147,5,6,0,0,140,147,5,20,0,0,141,147,5,21,0,0,142,147,7,4,0,0,143,
-  	147,7,5,0,0,144,147,5,28,0,0,145,147,5,29,0,0,146,135,1,0,0,0,146,136,
-  	1,0,0,0,146,137,1,0,0,0,146,138,1,0,0,0,146,139,1,0,0,0,146,140,1,0,0,
-  	0,146,141,1,0,0,0,146,142,1,0,0,0,146,143,1,0,0,0,146,144,1,0,0,0,146,
-  	145,1,0,0,0,147,9,1,0,0,0,148,149,3,0,0,0,149,11,1,0,0,0,150,151,5,57,
-  	0,0,151,152,3,14,7,0,152,13,1,0,0,0,153,154,5,30,0,0,154,157,3,10,5,0,
-  	155,156,5,31,0,0,156,158,3,4,2,0,157,155,1,0,0,0,157,158,1,0,0,0,158,
-  	162,1,0,0,0,159,160,5,32,0,0,160,162,3,4,2,0,161,153,1,0,0,0,161,159,
-  	1,0,0,0,162,15,1,0,0,0,163,164,5,57,0,0,164,165,3,18,9,0,165,166,3,4,
-  	2,0,166,17,1,0,0,0,167,179,5,33,0,0,168,179,5,34,0,0,169,179,5,35,0,0,
-  	170,179,5,36,0,0,171,179,5,37,0,0,172,179,5,38,0,0,173,179,5,39,0,0,174,
-  	179,5,40,0,0,175,179,5,41,0,0,176,179,5,42,0,0,177,179,5,43,0,0,178,167,
-  	1,0,0,0,178,168,1,0,0,0,178,169,1,0,0,0,178,170,1,0,0,0,178,171,1,0,0,
-  	0,178,172,1,0,0,0,178,173,1,0,0,0,178,174,1,0,0,0,178,175,1,0,0,0,178,
-  	176,1,0,0,0,178,177,1,0,0,0,179,19,1,0,0,0,180,181,3,22,11,0,181,182,
-  	5,62,0,0,182,21,1,0,0,0,183,190,3,24,12,0,184,190,3,26,13,0,185,190,3,
-  	28,14,0,186,190,3,30,15,0,187,190,3,12,6,0,188,190,3,16,8,0,189,183,1,
-  	0,0,0,189,184,1,0,0,0,189,185,1,0,0,0,189,186,1,0,0,0,189,187,1,0,0,0,
-  	189,188,1,0,0,0,190,23,1,0,0,0,191,192,3,0,0,0,192,193,7,6,0,0,193,25,
-  	1,0,0,0,194,195,3,4,2,0,195,196,3,2,1,0,196,27,1,0,0,0,197,198,5,46,0,
-  	0,198,199,3,4,2,0,199,200,5,62,0,0,200,209,3,32,16,0,201,202,5,47,0,0,
-  	202,203,5,46,0,0,203,204,3,4,2,0,204,205,5,62,0,0,205,206,3,32,16,0,206,
-  	208,1,0,0,0,207,201,1,0,0,0,208,211,1,0,0,0,209,207,1,0,0,0,209,210,1,
-  	0,0,0,210,215,1,0,0,0,211,209,1,0,0,0,212,213,5,47,0,0,213,214,5,62,0,
-  	0,214,216,3,32,16,0,215,212,1,0,0,0,215,216,1,0,0,0,216,217,1,0,0,0,217,
-  	218,5,48,0,0,218,219,5,46,0,0,219,29,1,0,0,0,220,221,5,49,0,0,221,222,
-  	3,4,2,0,222,223,5,62,0,0,223,224,3,32,16,0,224,225,5,48,0,0,225,226,5,
-  	49,0,0,226,31,1,0,0,0,227,231,3,20,10,0,228,230,5,62,0,0,229,228,1,0,
-  	0,0,230,233,1,0,0,0,231,229,1,0,0,0,231,232,1,0,0,0,232,235,1,0,0,0,233,
-  	231,1,0,0,0,234,227,1,0,0,0,235,238,1,0,0,0,236,234,1,0,0,0,236,237,1,
-  	0,0,0,237,33,1,0,0,0,238,236,1,0,0,0,239,240,5,50,0,0,240,241,5,57,0,
-  	0,241,242,3,36,18,0,242,243,5,62,0,0,243,244,3,32,16,0,244,245,5,48,0,
-  	0,245,246,5,57,0,0,246,35,1,0,0,0,247,251,5,2,0,0,248,250,5,62,0,0,249,
-  	248,1,0,0,0,250,253,1,0,0,0,251,249,1,0,0,0,251,252,1,0,0,0,252,273,1,
-  	0,0,0,253,251,1,0,0,0,254,255,3,12,6,0,255,259,5,3,0,0,256,258,5,62,0,
-  	0,257,256,1,0,0,0,258,261,1,0,0,0,259,257,1,0,0,0,259,260,1,0,0,0,260,
-  	262,1,0,0,0,261,259,1,0,0,0,262,263,3,12,6,0,263,265,1,0,0,0,264,266,
-  	5,3,0,0,265,264,1,0,0,0,265,266,1,0,0,0,266,270,1,0,0,0,267,269,5,62,
-  	0,0,268,267,1,0,0,0,269,272,1,0,0,0,270,268,1,0,0,0,270,271,1,0,0,0,271,
-  	274,1,0,0,0,272,270,1,0,0,0,273,254,1,0,0,0,273,274,1,0,0,0,274,275,1,
-  	0,0,0,275,276,5,4,0,0,276,37,1,0,0,0,277,278,7,7,0,0,278,39,1,0,0,0,279,
-  	280,3,38,19,0,280,286,5,62,0,0,281,282,3,12,6,0,282,283,5,62,0,0,283,
-  	285,1,0,0,0,284,281,1,0,0,0,285,288,1,0,0,0,286,284,1,0,0,0,286,287,1,
-  	0,0,0,287,289,1,0,0,0,288,286,1,0,0,0,289,290,5,48,0,0,290,291,5,57,0,
-  	0,291,41,1,0,0,0,292,295,3,10,5,0,293,295,3,40,20,0,294,292,1,0,0,0,294,
-  	293,1,0,0,0,295,43,1,0,0,0,296,297,7,8,0,0,297,298,5,57,0,0,298,299,5,
-  	56,0,0,299,300,3,42,21,0,300,301,5,62,0,0,301,45,1,0,0,0,302,308,3,34,
-  	17,0,303,308,3,44,22,0,304,305,3,12,6,0,305,306,5,62,0,0,306,308,1,0,
-  	0,0,307,302,1,0,0,0,307,303,1,0,0,0,307,304,1,0,0,0,308,47,1,0,0,0,309,
-  	313,3,46,23,0,310,312,5,62,0,0,311,310,1,0,0,0,312,315,1,0,0,0,313,311,
-  	1,0,0,0,313,314,1,0,0,0,314,317,1,0,0,0,315,313,1,0,0,0,316,309,1,0,0,
-  	0,317,320,1,0,0,0,318,316,1,0,0,0,318,319,1,0,0,0,319,49,1,0,0,0,320,
-  	318,1,0,0,0,32,54,63,71,77,81,86,89,97,107,117,119,121,133,146,157,161,
-  	178,189,209,215,231,236,251,259,265,270,273,286,294,307,313,318
+  	7,1,7,1,7,3,7,162,8,7,1,8,1,8,1,8,1,8,1,9,1,9,1,10,1,10,1,10,1,11,1,11,
+  	1,11,1,11,1,11,1,11,3,11,179,8,11,1,12,1,12,1,12,1,13,1,13,1,13,1,14,
+  	1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,5,14,197,8,14,10,14,12,14,
+  	200,9,14,1,14,1,14,1,14,3,14,205,8,14,1,14,1,14,1,14,1,15,1,15,1,15,1,
+  	15,1,15,1,15,1,15,1,16,5,16,218,8,16,10,16,12,16,221,9,16,1,16,1,16,5,
+  	16,225,8,16,10,16,12,16,228,9,16,5,16,230,8,16,10,16,12,16,233,9,16,1,
+  	17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,18,1,18,5,18,245,8,18,10,18,12,
+  	18,248,9,18,1,18,1,18,1,18,5,18,253,8,18,10,18,12,18,256,9,18,1,18,1,
+  	18,1,18,3,18,261,8,18,1,18,5,18,264,8,18,10,18,12,18,267,9,18,3,18,269,
+  	8,18,1,18,1,18,1,19,1,19,1,20,1,20,4,20,277,8,20,11,20,12,20,278,1,20,
+  	1,20,4,20,283,8,20,11,20,12,20,284,5,20,287,8,20,10,20,12,20,290,9,20,
+  	1,20,1,20,1,20,1,21,1,21,3,21,297,8,21,1,22,1,22,1,22,1,22,1,22,1,22,
+  	1,23,1,23,1,23,1,23,1,23,3,23,310,8,23,1,24,1,24,5,24,314,8,24,10,24,
+  	12,24,317,9,24,5,24,319,8,24,10,24,12,24,322,9,24,1,24,0,1,4,25,0,2,4,
+  	6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,0,10,
+  	1,0,5,10,2,0,5,5,16,17,1,0,7,8,1,0,18,19,1,0,22,25,1,0,26,27,1,0,33,43,
+  	1,0,44,45,1,0,51,53,1,0,54,55,351,0,54,1,0,0,0,2,59,1,0,0,0,4,107,1,0,
+  	0,0,6,133,1,0,0,0,8,146,1,0,0,0,10,148,1,0,0,0,12,150,1,0,0,0,14,161,
+  	1,0,0,0,16,163,1,0,0,0,18,167,1,0,0,0,20,169,1,0,0,0,22,178,1,0,0,0,24,
+  	180,1,0,0,0,26,183,1,0,0,0,28,186,1,0,0,0,30,209,1,0,0,0,32,219,1,0,0,
+  	0,34,234,1,0,0,0,36,242,1,0,0,0,38,272,1,0,0,0,40,274,1,0,0,0,42,296,
+  	1,0,0,0,44,298,1,0,0,0,46,309,1,0,0,0,48,320,1,0,0,0,50,51,5,57,0,0,51,
+  	53,5,1,0,0,52,50,1,0,0,0,53,56,1,0,0,0,54,52,1,0,0,0,54,55,1,0,0,0,55,
+  	57,1,0,0,0,56,54,1,0,0,0,57,58,5,57,0,0,58,1,1,0,0,0,59,63,5,2,0,0,60,
+  	62,5,62,0,0,61,60,1,0,0,0,62,65,1,0,0,0,63,61,1,0,0,0,63,64,1,0,0,0,64,
+  	89,1,0,0,0,65,63,1,0,0,0,66,77,3,4,2,0,67,71,5,3,0,0,68,70,5,62,0,0,69,
+  	68,1,0,0,0,70,73,1,0,0,0,71,69,1,0,0,0,71,72,1,0,0,0,72,74,1,0,0,0,73,
+  	71,1,0,0,0,74,76,3,4,2,0,75,67,1,0,0,0,76,79,1,0,0,0,77,75,1,0,0,0,77,
+  	78,1,0,0,0,78,81,1,0,0,0,79,77,1,0,0,0,80,82,5,3,0,0,81,80,1,0,0,0,81,
+  	82,1,0,0,0,82,86,1,0,0,0,83,85,5,62,0,0,84,83,1,0,0,0,85,88,1,0,0,0,86,
+  	84,1,0,0,0,86,87,1,0,0,0,87,90,1,0,0,0,88,86,1,0,0,0,89,66,1,0,0,0,89,
+  	90,1,0,0,0,90,91,1,0,0,0,91,92,5,4,0,0,92,3,1,0,0,0,93,95,6,2,-1,0,94,
+  	96,7,0,0,0,95,94,1,0,0,0,96,97,1,0,0,0,97,95,1,0,0,0,97,98,1,0,0,0,98,
+  	99,1,0,0,0,99,108,3,4,2,6,100,101,5,2,0,0,101,102,3,4,2,0,102,103,5,4,
+  	0,0,103,108,1,0,0,0,104,108,5,58,0,0,105,108,5,59,0,0,106,108,3,0,0,0,
+  	107,93,1,0,0,0,107,100,1,0,0,0,107,104,1,0,0,0,107,105,1,0,0,0,107,106,
+  	1,0,0,0,108,121,1,0,0,0,109,110,10,7,0,0,110,120,3,6,3,0,111,115,10,5,
+  	0,0,112,113,3,8,4,0,113,114,3,4,2,0,114,116,1,0,0,0,115,112,1,0,0,0,116,
+  	117,1,0,0,0,117,115,1,0,0,0,117,118,1,0,0,0,118,120,1,0,0,0,119,109,1,
+  	0,0,0,119,111,1,0,0,0,120,123,1,0,0,0,121,119,1,0,0,0,121,122,1,0,0,0,
+  	122,5,1,0,0,0,123,121,1,0,0,0,124,134,3,2,1,0,125,126,5,11,0,0,126,127,
+  	3,4,2,0,127,128,5,12,0,0,128,134,1,0,0,0,129,130,5,13,0,0,130,134,5,57,
+  	0,0,131,132,5,14,0,0,132,134,5,57,0,0,133,124,1,0,0,0,133,125,1,0,0,0,
+  	133,129,1,0,0,0,133,131,1,0,0,0,134,7,1,0,0,0,135,147,5,15,0,0,136,147,
+  	7,1,0,0,137,147,7,2,0,0,138,147,7,3,0,0,139,147,5,6,0,0,140,147,5,20,
+  	0,0,141,147,5,21,0,0,142,147,7,4,0,0,143,147,7,5,0,0,144,147,5,28,0,0,
+  	145,147,5,29,0,0,146,135,1,0,0,0,146,136,1,0,0,0,146,137,1,0,0,0,146,
+  	138,1,0,0,0,146,139,1,0,0,0,146,140,1,0,0,0,146,141,1,0,0,0,146,142,1,
+  	0,0,0,146,143,1,0,0,0,146,144,1,0,0,0,146,145,1,0,0,0,147,9,1,0,0,0,148,
+  	149,3,0,0,0,149,11,1,0,0,0,150,151,5,57,0,0,151,152,3,14,7,0,152,13,1,
+  	0,0,0,153,154,5,30,0,0,154,157,3,10,5,0,155,156,5,31,0,0,156,158,3,4,
+  	2,0,157,155,1,0,0,0,157,158,1,0,0,0,158,162,1,0,0,0,159,160,5,32,0,0,
+  	160,162,3,4,2,0,161,153,1,0,0,0,161,159,1,0,0,0,162,15,1,0,0,0,163,164,
+  	5,57,0,0,164,165,3,18,9,0,165,166,3,4,2,0,166,17,1,0,0,0,167,168,7,6,
+  	0,0,168,19,1,0,0,0,169,170,3,22,11,0,170,171,5,62,0,0,171,21,1,0,0,0,
+  	172,179,3,24,12,0,173,179,3,26,13,0,174,179,3,28,14,0,175,179,3,30,15,
+  	0,176,179,3,12,6,0,177,179,3,16,8,0,178,172,1,0,0,0,178,173,1,0,0,0,178,
+  	174,1,0,0,0,178,175,1,0,0,0,178,176,1,0,0,0,178,177,1,0,0,0,179,23,1,
+  	0,0,0,180,181,3,0,0,0,181,182,7,7,0,0,182,25,1,0,0,0,183,184,3,4,2,0,
+  	184,185,3,2,1,0,185,27,1,0,0,0,186,187,5,46,0,0,187,188,3,4,2,0,188,189,
+  	5,62,0,0,189,198,3,32,16,0,190,191,5,47,0,0,191,192,5,46,0,0,192,193,
+  	3,4,2,0,193,194,5,62,0,0,194,195,3,32,16,0,195,197,1,0,0,0,196,190,1,
+  	0,0,0,197,200,1,0,0,0,198,196,1,0,0,0,198,199,1,0,0,0,199,204,1,0,0,0,
+  	200,198,1,0,0,0,201,202,5,47,0,0,202,203,5,62,0,0,203,205,3,32,16,0,204,
+  	201,1,0,0,0,204,205,1,0,0,0,205,206,1,0,0,0,206,207,5,48,0,0,207,208,
+  	5,46,0,0,208,29,1,0,0,0,209,210,5,49,0,0,210,211,3,4,2,0,211,212,5,62,
+  	0,0,212,213,3,32,16,0,213,214,5,48,0,0,214,215,5,49,0,0,215,31,1,0,0,
+  	0,216,218,5,62,0,0,217,216,1,0,0,0,218,221,1,0,0,0,219,217,1,0,0,0,219,
+  	220,1,0,0,0,220,231,1,0,0,0,221,219,1,0,0,0,222,226,3,20,10,0,223,225,
+  	5,62,0,0,224,223,1,0,0,0,225,228,1,0,0,0,226,224,1,0,0,0,226,227,1,0,
+  	0,0,227,230,1,0,0,0,228,226,1,0,0,0,229,222,1,0,0,0,230,233,1,0,0,0,231,
+  	229,1,0,0,0,231,232,1,0,0,0,232,33,1,0,0,0,233,231,1,0,0,0,234,235,5,
+  	50,0,0,235,236,5,57,0,0,236,237,3,36,18,0,237,238,5,62,0,0,238,239,3,
+  	32,16,0,239,240,5,48,0,0,240,241,5,57,0,0,241,35,1,0,0,0,242,246,5,2,
+  	0,0,243,245,5,62,0,0,244,243,1,0,0,0,245,248,1,0,0,0,246,244,1,0,0,0,
+  	246,247,1,0,0,0,247,268,1,0,0,0,248,246,1,0,0,0,249,250,3,12,6,0,250,
+  	254,5,3,0,0,251,253,5,62,0,0,252,251,1,0,0,0,253,256,1,0,0,0,254,252,
+  	1,0,0,0,254,255,1,0,0,0,255,257,1,0,0,0,256,254,1,0,0,0,257,258,3,12,
+  	6,0,258,260,1,0,0,0,259,261,5,3,0,0,260,259,1,0,0,0,260,261,1,0,0,0,261,
+  	265,1,0,0,0,262,264,5,62,0,0,263,262,1,0,0,0,264,267,1,0,0,0,265,263,
+  	1,0,0,0,265,266,1,0,0,0,266,269,1,0,0,0,267,265,1,0,0,0,268,249,1,0,0,
+  	0,268,269,1,0,0,0,269,270,1,0,0,0,270,271,5,4,0,0,271,37,1,0,0,0,272,
+  	273,7,8,0,0,273,39,1,0,0,0,274,276,3,38,19,0,275,277,5,62,0,0,276,275,
+  	1,0,0,0,277,278,1,0,0,0,278,276,1,0,0,0,278,279,1,0,0,0,279,288,1,0,0,
+  	0,280,282,3,12,6,0,281,283,5,62,0,0,282,281,1,0,0,0,283,284,1,0,0,0,284,
+  	282,1,0,0,0,284,285,1,0,0,0,285,287,1,0,0,0,286,280,1,0,0,0,287,290,1,
+  	0,0,0,288,286,1,0,0,0,288,289,1,0,0,0,289,291,1,0,0,0,290,288,1,0,0,0,
+  	291,292,5,48,0,0,292,293,5,57,0,0,293,41,1,0,0,0,294,297,3,10,5,0,295,
+  	297,3,40,20,0,296,294,1,0,0,0,296,295,1,0,0,0,297,43,1,0,0,0,298,299,
+  	7,9,0,0,299,300,5,57,0,0,300,301,5,56,0,0,301,302,3,42,21,0,302,303,5,
+  	62,0,0,303,45,1,0,0,0,304,310,3,34,17,0,305,310,3,44,22,0,306,307,3,12,
+  	6,0,307,308,5,62,0,0,308,310,1,0,0,0,309,304,1,0,0,0,309,305,1,0,0,0,
+  	309,306,1,0,0,0,310,47,1,0,0,0,311,315,3,46,23,0,312,314,5,62,0,0,313,
+  	312,1,0,0,0,314,317,1,0,0,0,315,313,1,0,0,0,315,316,1,0,0,0,316,319,1,
+  	0,0,0,317,315,1,0,0,0,318,311,1,0,0,0,319,322,1,0,0,0,320,318,1,0,0,0,
+  	320,321,1,0,0,0,321,49,1,0,0,0,322,320,1,0,0,0,34,54,63,71,77,81,86,89,
+  	97,107,117,119,121,133,146,157,161,178,198,204,219,226,231,246,254,260,
+  	265,268,278,284,288,296,309,315,320
   };
   staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
 
@@ -1786,244 +1786,30 @@ size_t CapsuleParser::InPlaceOpContext::getRuleIndex() const {
   return CapsuleParser::RuleInPlaceOp;
 }
 
-void CapsuleParser::InPlaceOpContext::copyFrom(InPlaceOpContext *ctx) {
-  ParserRuleContext::copyFrom(ctx);
-}
-
-//----------------- PlusEqContext ------------------------------------------------------------------
-
-CapsuleParser::PlusEqContext::PlusEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::PlusEqContext::enterRule(tree::ParseTreeListener *listener) {
+void CapsuleParser::InPlaceOpContext::enterRule(tree::ParseTreeListener *listener) {
   auto parserListener = dynamic_cast<CapsuleListener *>(listener);
   if (parserListener != nullptr)
-    parserListener->enterPlusEq(this);
-}
-void CapsuleParser::PlusEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPlusEq(this);
+    parserListener->enterInPlaceOp(this);
 }
 
-std::any CapsuleParser::PlusEqContext::accept(tree::ParseTreeVisitor *visitor) {
+void CapsuleParser::InPlaceOpContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitInPlaceOp(this);
+}
+
+
+std::any CapsuleParser::InPlaceOpContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitPlusEq(this);
+    return parserVisitor->visitInPlaceOp(this);
   else
     return visitor->visitChildren(this);
 }
-//----------------- LShiftEqContext ------------------------------------------------------------------
 
-CapsuleParser::LShiftEqContext::LShiftEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::LShiftEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLShiftEq(this);
-}
-void CapsuleParser::LShiftEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLShiftEq(this);
-}
-
-std::any CapsuleParser::LShiftEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitLShiftEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- MinusEqContext ------------------------------------------------------------------
-
-CapsuleParser::MinusEqContext::MinusEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::MinusEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMinusEq(this);
-}
-void CapsuleParser::MinusEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMinusEq(this);
-}
-
-std::any CapsuleParser::MinusEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitMinusEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- RShiftEqContext ------------------------------------------------------------------
-
-CapsuleParser::RShiftEqContext::RShiftEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::RShiftEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRShiftEq(this);
-}
-void CapsuleParser::RShiftEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRShiftEq(this);
-}
-
-std::any CapsuleParser::RShiftEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitRShiftEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- XorEqContext ------------------------------------------------------------------
-
-CapsuleParser::XorEqContext::XorEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::XorEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterXorEq(this);
-}
-void CapsuleParser::XorEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitXorEq(this);
-}
-
-std::any CapsuleParser::XorEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitXorEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- AndEqContext ------------------------------------------------------------------
-
-CapsuleParser::AndEqContext::AndEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::AndEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAndEq(this);
-}
-void CapsuleParser::AndEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAndEq(this);
-}
-
-std::any CapsuleParser::AndEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitAndEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- OrEqContext ------------------------------------------------------------------
-
-CapsuleParser::OrEqContext::OrEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::OrEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOrEq(this);
-}
-void CapsuleParser::OrEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOrEq(this);
-}
-
-std::any CapsuleParser::OrEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitOrEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- ModEqContext ------------------------------------------------------------------
-
-CapsuleParser::ModEqContext::ModEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::ModEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterModEq(this);
-}
-void CapsuleParser::ModEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitModEq(this);
-}
-
-std::any CapsuleParser::ModEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitModEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- ExpEqContext ------------------------------------------------------------------
-
-CapsuleParser::ExpEqContext::ExpEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::ExpEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExpEq(this);
-}
-void CapsuleParser::ExpEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExpEq(this);
-}
-
-std::any CapsuleParser::ExpEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitExpEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- MultEqContext ------------------------------------------------------------------
-
-CapsuleParser::MultEqContext::MultEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::MultEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMultEq(this);
-}
-void CapsuleParser::MultEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMultEq(this);
-}
-
-std::any CapsuleParser::MultEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitMultEq(this);
-  else
-    return visitor->visitChildren(this);
-}
-//----------------- DivEqContext ------------------------------------------------------------------
-
-CapsuleParser::DivEqContext::DivEqContext(InPlaceOpContext *ctx) { copyFrom(ctx); }
-
-void CapsuleParser::DivEqContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDivEq(this);
-}
-void CapsuleParser::DivEqContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<CapsuleListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDivEq(this);
-}
-
-std::any CapsuleParser::DivEqContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<CapsuleVisitor*>(visitor))
-    return parserVisitor->visitDivEq(this);
-  else
-    return visitor->visitChildren(this);
-}
 CapsuleParser::InPlaceOpContext* CapsuleParser::inPlaceOp() {
   InPlaceOpContext *_localctx = _tracker.createInstance<InPlaceOpContext>(_ctx, getState());
   enterRule(_localctx, 18, CapsuleParser::RuleInPlaceOp);
+  size_t _la = 0;
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -2033,99 +1819,17 @@ CapsuleParser::InPlaceOpContext* CapsuleParser::inPlaceOp() {
     exitRule();
   });
   try {
-    setState(178);
-    _errHandler->sync(this);
-    switch (_input->LA(1)) {
-      case CapsuleParser::T__32: {
-        _localctx = _tracker.createInstance<CapsuleParser::PlusEqContext>(_localctx);
-        enterOuterAlt(_localctx, 1);
-        setState(167);
-        match(CapsuleParser::T__32);
-        break;
-      }
-
-      case CapsuleParser::T__33: {
-        _localctx = _tracker.createInstance<CapsuleParser::MinusEqContext>(_localctx);
-        enterOuterAlt(_localctx, 2);
-        setState(168);
-        match(CapsuleParser::T__33);
-        break;
-      }
-
-      case CapsuleParser::T__34: {
-        _localctx = _tracker.createInstance<CapsuleParser::MultEqContext>(_localctx);
-        enterOuterAlt(_localctx, 3);
-        setState(169);
-        match(CapsuleParser::T__34);
-        break;
-      }
-
-      case CapsuleParser::T__35: {
-        _localctx = _tracker.createInstance<CapsuleParser::DivEqContext>(_localctx);
-        enterOuterAlt(_localctx, 4);
-        setState(170);
-        match(CapsuleParser::T__35);
-        break;
-      }
-
-      case CapsuleParser::T__36: {
-        _localctx = _tracker.createInstance<CapsuleParser::ModEqContext>(_localctx);
-        enterOuterAlt(_localctx, 5);
-        setState(171);
-        match(CapsuleParser::T__36);
-        break;
-      }
-
-      case CapsuleParser::T__37: {
-        _localctx = _tracker.createInstance<CapsuleParser::ExpEqContext>(_localctx);
-        enterOuterAlt(_localctx, 6);
-        setState(172);
-        match(CapsuleParser::T__37);
-        break;
-      }
-
-      case CapsuleParser::T__38: {
-        _localctx = _tracker.createInstance<CapsuleParser::XorEqContext>(_localctx);
-        enterOuterAlt(_localctx, 7);
-        setState(173);
-        match(CapsuleParser::T__38);
-        break;
-      }
-
-      case CapsuleParser::T__39: {
-        _localctx = _tracker.createInstance<CapsuleParser::OrEqContext>(_localctx);
-        enterOuterAlt(_localctx, 8);
-        setState(174);
-        match(CapsuleParser::T__39);
-        break;
-      }
-
-      case CapsuleParser::T__40: {
-        _localctx = _tracker.createInstance<CapsuleParser::AndEqContext>(_localctx);
-        enterOuterAlt(_localctx, 9);
-        setState(175);
-        match(CapsuleParser::T__40);
-        break;
-      }
-
-      case CapsuleParser::T__41: {
-        _localctx = _tracker.createInstance<CapsuleParser::LShiftEqContext>(_localctx);
-        enterOuterAlt(_localctx, 10);
-        setState(176);
-        match(CapsuleParser::T__41);
-        break;
-      }
-
-      case CapsuleParser::T__42: {
-        _localctx = _tracker.createInstance<CapsuleParser::RShiftEqContext>(_localctx);
-        enterOuterAlt(_localctx, 11);
-        setState(177);
-        match(CapsuleParser::T__42);
-        break;
-      }
-
-    default:
-      throw NoViableAltException(this);
+    enterOuterAlt(_localctx, 1);
+    setState(167);
+    antlrcpp::downCast<InPlaceOpContext *>(_localctx)->op = _input->LT(1);
+    _la = _input->LA(1);
+    if (!((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 17583596109824) != 0))) {
+      antlrcpp::downCast<InPlaceOpContext *>(_localctx)->op = _errHandler->recoverInline(this);
+    }
+    else {
+      _errHandler->reportMatch(this);
+      consume();
     }
    
   }
@@ -2190,9 +1894,9 @@ CapsuleParser::StatementContext* CapsuleParser::statement() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(180);
+    setState(169);
     antlrcpp::downCast<StatementContext *>(_localctx)->subStmt = statement_no_endline();
-    setState(181);
+    setState(170);
     match(CapsuleParser::ENDLINE);
    
   }
@@ -2382,13 +2086,13 @@ CapsuleParser::Statement_no_endlineContext* CapsuleParser::statement_no_endline(
     exitRule();
   });
   try {
-    setState(189);
+    setState(178);
     _errHandler->sync(this);
-    switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 17, _ctx)) {
+    switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 16, _ctx)) {
     case 1: {
       _localctx = _tracker.createInstance<CapsuleParser::IncDecStmtContext>(_localctx);
       enterOuterAlt(_localctx, 1);
-      setState(183);
+      setState(172);
       antlrcpp::downCast<IncDecStmtContext *>(_localctx)->subStmt = incDecStatement();
       break;
     }
@@ -2396,7 +2100,7 @@ CapsuleParser::Statement_no_endlineContext* CapsuleParser::statement_no_endline(
     case 2: {
       _localctx = _tracker.createInstance<CapsuleParser::FuncCallStmtContext>(_localctx);
       enterOuterAlt(_localctx, 2);
-      setState(184);
+      setState(173);
       antlrcpp::downCast<FuncCallStmtContext *>(_localctx)->subStmt = functionCallStatement();
       break;
     }
@@ -2404,7 +2108,7 @@ CapsuleParser::Statement_no_endlineContext* CapsuleParser::statement_no_endline(
     case 3: {
       _localctx = _tracker.createInstance<CapsuleParser::IfStmtContext>(_localctx);
       enterOuterAlt(_localctx, 3);
-      setState(185);
+      setState(174);
       antlrcpp::downCast<IfStmtContext *>(_localctx)->subStmt = ifStatement();
       break;
     }
@@ -2412,7 +2116,7 @@ CapsuleParser::Statement_no_endlineContext* CapsuleParser::statement_no_endline(
     case 4: {
       _localctx = _tracker.createInstance<CapsuleParser::WhileStmtContext>(_localctx);
       enterOuterAlt(_localctx, 4);
-      setState(186);
+      setState(175);
       antlrcpp::downCast<WhileStmtContext *>(_localctx)->subStmt = whileStatement();
       break;
     }
@@ -2420,7 +2124,7 @@ CapsuleParser::Statement_no_endlineContext* CapsuleParser::statement_no_endline(
     case 5: {
       _localctx = _tracker.createInstance<CapsuleParser::CreateVarStmtContext>(_localctx);
       enterOuterAlt(_localctx, 5);
-      setState(187);
+      setState(176);
       antlrcpp::downCast<CreateVarStmtContext *>(_localctx)->subStmt = createVar();
       break;
     }
@@ -2428,7 +2132,7 @@ CapsuleParser::Statement_no_endlineContext* CapsuleParser::statement_no_endline(
     case 6: {
       _localctx = _tracker.createInstance<CapsuleParser::ModifyVarStmtContext>(_localctx);
       enterOuterAlt(_localctx, 6);
-      setState(188);
+      setState(177);
       antlrcpp::downCast<ModifyVarStmtContext *>(_localctx)->subStmt = modifyVar();
       break;
     }
@@ -2496,9 +2200,9 @@ CapsuleParser::IncDecStatementContext* CapsuleParser::incDecStatement() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(191);
+    setState(180);
     antlrcpp::downCast<IncDecStatementContext *>(_localctx)->incDecIdent = ident();
-    setState(192);
+    setState(181);
     antlrcpp::downCast<IncDecStatementContext *>(_localctx)->op = _input->LT(1);
     _la = _input->LA(1);
     if (!(_la == CapsuleParser::T__43
@@ -2573,9 +2277,9 @@ CapsuleParser::FunctionCallStatementContext* CapsuleParser::functionCallStatemen
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(194);
+    setState(183);
     antlrcpp::downCast<FunctionCallStatementContext *>(_localctx)->subExpr = expr(0);
-    setState(195);
+    setState(184);
     antlrcpp::downCast<FunctionCallStatementContext *>(_localctx)->args = callArgs();
    
   }
@@ -2658,49 +2362,49 @@ CapsuleParser::IfStatementContext* CapsuleParser::ifStatement() {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(197);
+    setState(186);
     match(CapsuleParser::T__45);
-    setState(198);
+    setState(187);
     antlrcpp::downCast<IfStatementContext *>(_localctx)->if_cond = expr(0);
-    setState(199);
+    setState(188);
     match(CapsuleParser::ENDLINE);
-    setState(200);
+    setState(189);
     antlrcpp::downCast<IfStatementContext *>(_localctx)->if_body = compoundStatement();
-    setState(209);
+    setState(198);
     _errHandler->sync(this);
-    alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 18, _ctx);
+    alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 17, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
       if (alt == 1) {
-        setState(201);
+        setState(190);
         match(CapsuleParser::T__46);
-        setState(202);
+        setState(191);
         match(CapsuleParser::T__45);
-        setState(203);
+        setState(192);
         antlrcpp::downCast<IfStatementContext *>(_localctx)->else_if_cond = expr(0);
-        setState(204);
+        setState(193);
         match(CapsuleParser::ENDLINE);
-        setState(205);
+        setState(194);
         antlrcpp::downCast<IfStatementContext *>(_localctx)->else_if_body = compoundStatement(); 
       }
-      setState(211);
+      setState(200);
       _errHandler->sync(this);
-      alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 18, _ctx);
+      alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 17, _ctx);
     }
-    setState(215);
+    setState(204);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == CapsuleParser::T__46) {
-      setState(212);
+      setState(201);
       match(CapsuleParser::T__46);
-      setState(213);
+      setState(202);
       match(CapsuleParser::ENDLINE);
-      setState(214);
+      setState(203);
       antlrcpp::downCast<IfStatementContext *>(_localctx)->else_body = compoundStatement();
     }
-    setState(217);
+    setState(206);
     match(CapsuleParser::T__47);
-    setState(218);
+    setState(207);
     match(CapsuleParser::T__45);
    
   }
@@ -2769,17 +2473,17 @@ CapsuleParser::WhileStatementContext* CapsuleParser::whileStatement() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(220);
+    setState(209);
     match(CapsuleParser::T__48);
-    setState(221);
+    setState(210);
     antlrcpp::downCast<WhileStatementContext *>(_localctx)->whileCond = expr(0);
-    setState(222);
+    setState(211);
     match(CapsuleParser::ENDLINE);
-    setState(223);
+    setState(212);
     antlrcpp::downCast<WhileStatementContext *>(_localctx)->whileBody = compoundStatement();
-    setState(224);
+    setState(213);
     match(CapsuleParser::T__47);
-    setState(225);
+    setState(214);
     match(CapsuleParser::T__48);
    
   }
@@ -2798,20 +2502,20 @@ CapsuleParser::CompoundStatementContext::CompoundStatementContext(ParserRuleCont
   : ParserRuleContext(parent, invokingState) {
 }
 
-std::vector<CapsuleParser::StatementContext *> CapsuleParser::CompoundStatementContext::statement() {
-  return getRuleContexts<CapsuleParser::StatementContext>();
-}
-
-CapsuleParser::StatementContext* CapsuleParser::CompoundStatementContext::statement(size_t i) {
-  return getRuleContext<CapsuleParser::StatementContext>(i);
-}
-
 std::vector<tree::TerminalNode *> CapsuleParser::CompoundStatementContext::ENDLINE() {
   return getTokens(CapsuleParser::ENDLINE);
 }
 
 tree::TerminalNode* CapsuleParser::CompoundStatementContext::ENDLINE(size_t i) {
   return getToken(CapsuleParser::ENDLINE, i);
+}
+
+std::vector<CapsuleParser::StatementContext *> CapsuleParser::CompoundStatementContext::statement() {
+  return getRuleContexts<CapsuleParser::StatementContext>();
+}
+
+CapsuleParser::StatementContext* CapsuleParser::CompoundStatementContext::statement(size_t i) {
+  return getRuleContext<CapsuleParser::StatementContext>(i);
 }
 
 
@@ -2853,24 +2557,34 @@ CapsuleParser::CompoundStatementContext* CapsuleParser::compoundStatement() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(236);
+    setState(219);
+    _errHandler->sync(this);
+    _la = _input->LA(1);
+    while (_la == CapsuleParser::ENDLINE) {
+      setState(216);
+      match(CapsuleParser::ENDLINE);
+      setState(221);
+      _errHandler->sync(this);
+      _la = _input->LA(1);
+    }
+    setState(231);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 1009439635228592100) != 0)) {
-      setState(227);
+      setState(222);
       antlrcpp::downCast<CompoundStatementContext *>(_localctx)->subStmt = statement();
-      setState(231);
+      setState(226);
       _errHandler->sync(this);
       _la = _input->LA(1);
       while (_la == CapsuleParser::ENDLINE) {
-        setState(228);
+        setState(223);
         match(CapsuleParser::ENDLINE);
-        setState(233);
+        setState(228);
         _errHandler->sync(this);
         _la = _input->LA(1);
       }
-      setState(238);
+      setState(233);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
@@ -2891,16 +2605,16 @@ CapsuleParser::FunctionDefContext::FunctionDefContext(ParserRuleContext *parent,
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* CapsuleParser::FunctionDefContext::ENDLINE() {
+  return getToken(CapsuleParser::ENDLINE, 0);
+}
+
 std::vector<tree::TerminalNode *> CapsuleParser::FunctionDefContext::WORD() {
   return getTokens(CapsuleParser::WORD);
 }
 
 tree::TerminalNode* CapsuleParser::FunctionDefContext::WORD(size_t i) {
   return getToken(CapsuleParser::WORD, i);
-}
-
-tree::TerminalNode* CapsuleParser::FunctionDefContext::ENDLINE() {
-  return getToken(CapsuleParser::ENDLINE, 0);
 }
 
 CapsuleParser::FunctionDefParamsContext* CapsuleParser::FunctionDefContext::functionDefParams() {
@@ -2949,20 +2663,20 @@ CapsuleParser::FunctionDefContext* CapsuleParser::functionDef() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(239);
+    setState(234);
     match(CapsuleParser::T__49);
-    setState(240);
-    match(CapsuleParser::WORD);
-    setState(241);
+    setState(235);
+    antlrcpp::downCast<FunctionDefContext *>(_localctx)->name = match(CapsuleParser::WORD);
+    setState(236);
     antlrcpp::downCast<FunctionDefContext *>(_localctx)->params = functionDefParams();
-    setState(242);
+    setState(237);
     match(CapsuleParser::ENDLINE);
-    setState(243);
+    setState(238);
     antlrcpp::downCast<FunctionDefContext *>(_localctx)->body = compoundStatement();
-    setState(244);
+    setState(239);
     match(CapsuleParser::T__47);
-    setState(245);
-    match(CapsuleParser::WORD);
+    setState(240);
+    antlrcpp::downCast<FunctionDefContext *>(_localctx)->endName = match(CapsuleParser::WORD);
    
   }
   catch (RecognitionException &e) {
@@ -3035,60 +2749,60 @@ CapsuleParser::FunctionDefParamsContext* CapsuleParser::functionDefParams() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(247);
+    setState(242);
     match(CapsuleParser::T__1);
-    setState(251);
+    setState(246);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while (_la == CapsuleParser::ENDLINE) {
-      setState(248);
+      setState(243);
       match(CapsuleParser::ENDLINE);
-      setState(253);
+      setState(248);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
-    setState(273);
+    setState(268);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == CapsuleParser::WORD) {
-      setState(254);
+      setState(249);
       antlrcpp::downCast<FunctionDefParamsContext *>(_localctx)->param = createVar();
 
-      setState(255);
+      setState(250);
       match(CapsuleParser::T__2);
-      setState(259);
+      setState(254);
       _errHandler->sync(this);
       _la = _input->LA(1);
       while (_la == CapsuleParser::ENDLINE) {
-        setState(256);
+        setState(251);
         match(CapsuleParser::ENDLINE);
-        setState(261);
+        setState(256);
         _errHandler->sync(this);
         _la = _input->LA(1);
       }
-      setState(262);
+      setState(257);
       antlrcpp::downCast<FunctionDefParamsContext *>(_localctx)->param = createVar();
-      setState(265);
+      setState(260);
       _errHandler->sync(this);
 
       _la = _input->LA(1);
       if (_la == CapsuleParser::T__2) {
-        setState(264);
+        setState(259);
         match(CapsuleParser::T__2);
       }
-      setState(270);
+      setState(265);
       _errHandler->sync(this);
       _la = _input->LA(1);
       while (_la == CapsuleParser::ENDLINE) {
-        setState(267);
+        setState(262);
         match(CapsuleParser::ENDLINE);
-        setState(272);
+        setState(267);
         _errHandler->sync(this);
         _la = _input->LA(1);
       }
     }
-    setState(275);
+    setState(270);
     match(CapsuleParser::T__3);
    
   }
@@ -3146,7 +2860,7 @@ CapsuleParser::TypeVarietyContext* CapsuleParser::typeVariety() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(277);
+    setState(272);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 15762598695796736) != 0))) {
@@ -3173,20 +2887,20 @@ CapsuleParser::TypeLiteralContext::TypeLiteralContext(ParserRuleContext *parent,
   : ParserRuleContext(parent, invokingState) {
 }
 
-std::vector<tree::TerminalNode *> CapsuleParser::TypeLiteralContext::ENDLINE() {
-  return getTokens(CapsuleParser::ENDLINE);
-}
-
-tree::TerminalNode* CapsuleParser::TypeLiteralContext::ENDLINE(size_t i) {
-  return getToken(CapsuleParser::ENDLINE, i);
+CapsuleParser::TypeVarietyContext* CapsuleParser::TypeLiteralContext::typeVariety() {
+  return getRuleContext<CapsuleParser::TypeVarietyContext>(0);
 }
 
 tree::TerminalNode* CapsuleParser::TypeLiteralContext::WORD() {
   return getToken(CapsuleParser::WORD, 0);
 }
 
-CapsuleParser::TypeVarietyContext* CapsuleParser::TypeLiteralContext::typeVariety() {
-  return getRuleContext<CapsuleParser::TypeVarietyContext>(0);
+std::vector<tree::TerminalNode *> CapsuleParser::TypeLiteralContext::ENDLINE() {
+  return getTokens(CapsuleParser::ENDLINE);
+}
+
+tree::TerminalNode* CapsuleParser::TypeLiteralContext::ENDLINE(size_t i) {
+  return getToken(CapsuleParser::ENDLINE, i);
 }
 
 std::vector<CapsuleParser::CreateVarContext *> CapsuleParser::TypeLiteralContext::createVar() {
@@ -3236,26 +2950,42 @@ CapsuleParser::TypeLiteralContext* CapsuleParser::typeLiteral() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(279);
+    setState(274);
     antlrcpp::downCast<TypeLiteralContext *>(_localctx)->variety = typeVariety();
-    setState(280);
-    match(CapsuleParser::ENDLINE);
-    setState(286);
+    setState(276); 
+    _errHandler->sync(this);
+    _la = _input->LA(1);
+    do {
+      setState(275);
+      match(CapsuleParser::ENDLINE);
+      setState(278); 
+      _errHandler->sync(this);
+      _la = _input->LA(1);
+    } while (_la == CapsuleParser::ENDLINE);
+    setState(288);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while (_la == CapsuleParser::WORD) {
-      setState(281);
+      setState(280);
       antlrcpp::downCast<TypeLiteralContext *>(_localctx)->field = createVar();
-      setState(282);
-      match(CapsuleParser::ENDLINE);
-      setState(288);
+      setState(282); 
+      _errHandler->sync(this);
+      _la = _input->LA(1);
+      do {
+        setState(281);
+        match(CapsuleParser::ENDLINE);
+        setState(284); 
+        _errHandler->sync(this);
+        _la = _input->LA(1);
+      } while (_la == CapsuleParser::ENDLINE);
+      setState(290);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
-    setState(289);
+    setState(291);
     match(CapsuleParser::T__47);
-    setState(290);
-    match(CapsuleParser::WORD);
+    setState(292);
+    antlrcpp::downCast<TypeLiteralContext *>(_localctx)->endWord = match(CapsuleParser::WORD);
    
   }
   catch (RecognitionException &e) {
@@ -3344,13 +3074,13 @@ CapsuleParser::TypeContext* CapsuleParser::type() {
     exitRule();
   });
   try {
-    setState(294);
+    setState(296);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case CapsuleParser::WORD: {
         _localctx = _tracker.createInstance<CapsuleParser::TypeFromNameContext>(_localctx);
         enterOuterAlt(_localctx, 1);
-        setState(292);
+        setState(294);
         antlrcpp::downCast<TypeFromNameContext *>(_localctx)->name = typeName();
         break;
       }
@@ -3360,7 +3090,7 @@ CapsuleParser::TypeContext* CapsuleParser::type() {
       case CapsuleParser::T__52: {
         _localctx = _tracker.createInstance<CapsuleParser::TypeFromLiteralContext>(_localctx);
         enterOuterAlt(_localctx, 2);
-        setState(293);
+        setState(295);
         antlrcpp::downCast<TypeFromLiteralContext *>(_localctx)->literal = typeLiteral();
         break;
       }
@@ -3436,7 +3166,7 @@ CapsuleParser::TypeOrAliasDefContext* CapsuleParser::typeOrAliasDef() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(296);
+    setState(298);
     antlrcpp::downCast<TypeOrAliasDefContext *>(_localctx)->typeOrAliasTok = _input->LT(1);
     _la = _input->LA(1);
     if (!(_la == CapsuleParser::T__53
@@ -3448,13 +3178,13 @@ CapsuleParser::TypeOrAliasDefContext* CapsuleParser::typeOrAliasDef() {
       _errHandler->reportMatch(this);
       consume();
     }
-    setState(297);
-    antlrcpp::downCast<TypeOrAliasDefContext *>(_localctx)->name = match(CapsuleParser::WORD);
-    setState(298);
-    match(CapsuleParser::T__55);
     setState(299);
-    antlrcpp::downCast<TypeOrAliasDefContext *>(_localctx)->assignType = type();
+    antlrcpp::downCast<TypeOrAliasDefContext *>(_localctx)->name = match(CapsuleParser::WORD);
     setState(300);
+    match(CapsuleParser::T__55);
+    setState(301);
+    antlrcpp::downCast<TypeOrAliasDefContext *>(_localctx)->assignType = type();
+    setState(302);
     match(CapsuleParser::ENDLINE);
    
   }
@@ -3573,13 +3303,13 @@ CapsuleParser::DefinitionContext* CapsuleParser::definition() {
     exitRule();
   });
   try {
-    setState(307);
+    setState(309);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case CapsuleParser::T__49: {
         _localctx = _tracker.createInstance<CapsuleParser::DefIsFunctionContext>(_localctx);
         enterOuterAlt(_localctx, 1);
-        setState(302);
+        setState(304);
         antlrcpp::downCast<DefIsFunctionContext *>(_localctx)->func = functionDef();
         break;
       }
@@ -3588,7 +3318,7 @@ CapsuleParser::DefinitionContext* CapsuleParser::definition() {
       case CapsuleParser::T__54: {
         _localctx = _tracker.createInstance<CapsuleParser::DefIsTypeOrAliasContext>(_localctx);
         enterOuterAlt(_localctx, 2);
-        setState(303);
+        setState(305);
         antlrcpp::downCast<DefIsTypeOrAliasContext *>(_localctx)->type_or_alias = typeOrAliasDef();
         break;
       }
@@ -3596,9 +3326,9 @@ CapsuleParser::DefinitionContext* CapsuleParser::definition() {
       case CapsuleParser::WORD: {
         _localctx = _tracker.createInstance<CapsuleParser::DefIsVarDefContext>(_localctx);
         enterOuterAlt(_localctx, 3);
-        setState(304);
+        setState(306);
         antlrcpp::downCast<DefIsVarDefContext *>(_localctx)->new_var = createVar();
-        setState(305);
+        setState(307);
         match(CapsuleParser::ENDLINE);
         break;
       }
@@ -3678,24 +3408,24 @@ CapsuleParser::FileContext* CapsuleParser::file() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(318);
+    setState(320);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 199284283511144448) != 0)) {
-      setState(309);
+      setState(311);
       antlrcpp::downCast<FileContext *>(_localctx)->def = definition();
-      setState(313);
+      setState(315);
       _errHandler->sync(this);
       _la = _input->LA(1);
       while (_la == CapsuleParser::ENDLINE) {
-        setState(310);
+        setState(312);
         match(CapsuleParser::ENDLINE);
-        setState(315);
+        setState(317);
         _errHandler->sync(this);
         _la = _input->LA(1);
       }
-      setState(320);
+      setState(322);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }

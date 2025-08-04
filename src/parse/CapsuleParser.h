@@ -1,5 +1,5 @@
 
-// Generated from ../../antlr/Capsule.g4 by ANTLR 4.13.2
+// Generated from C:/Users/George/source/repos/capsule/antlr/Capsule.g4 by ANTLR 4.13.2
 
 #pragma once
 
@@ -503,125 +503,15 @@ public:
 
   class  InPlaceOpContext : public antlr4::ParserRuleContext {
   public:
+    antlr4::Token *op = nullptr;
     InPlaceOpContext(antlr4::ParserRuleContext *parent, size_t invokingState);
-   
-    InPlaceOpContext() = default;
-    void copyFrom(InPlaceOpContext *context);
-    using antlr4::ParserRuleContext::copyFrom;
-
     virtual size_t getRuleIndex() const override;
 
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
-  };
-
-  class  PlusEqContext : public InPlaceOpContext {
-  public:
-    PlusEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  LShiftEqContext : public InPlaceOpContext {
-  public:
-    LShiftEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  MinusEqContext : public InPlaceOpContext {
-  public:
-    MinusEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  RShiftEqContext : public InPlaceOpContext {
-  public:
-    RShiftEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  XorEqContext : public InPlaceOpContext {
-  public:
-    XorEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  AndEqContext : public InPlaceOpContext {
-  public:
-    AndEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  OrEqContext : public InPlaceOpContext {
-  public:
-    OrEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  ModEqContext : public InPlaceOpContext {
-  public:
-    ModEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  ExpEqContext : public InPlaceOpContext {
-  public:
-    ExpEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  MultEqContext : public InPlaceOpContext {
-  public:
-    MultEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  DivEqContext : public InPlaceOpContext {
-  public:
-    DivEqContext(InPlaceOpContext *ctx);
-
-    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
-    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
-
-    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
   };
 
   InPlaceOpContext* inPlaceOp();
@@ -814,10 +704,10 @@ public:
     CapsuleParser::StatementContext *subStmt = nullptr;
     CompoundStatementContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    std::vector<StatementContext *> statement();
-    StatementContext* statement(size_t i);
     std::vector<antlr4::tree::TerminalNode *> ENDLINE();
     antlr4::tree::TerminalNode* ENDLINE(size_t i);
+    std::vector<StatementContext *> statement();
+    StatementContext* statement(size_t i);
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -830,13 +720,15 @@ public:
 
   class  FunctionDefContext : public antlr4::ParserRuleContext {
   public:
+    antlr4::Token *name = nullptr;
     CapsuleParser::FunctionDefParamsContext *params = nullptr;
     CapsuleParser::CompoundStatementContext *body = nullptr;
+    antlr4::Token *endName = nullptr;
     FunctionDefContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *ENDLINE();
     std::vector<antlr4::tree::TerminalNode *> WORD();
     antlr4::tree::TerminalNode* WORD(size_t i);
-    antlr4::tree::TerminalNode *ENDLINE();
     FunctionDefParamsContext *functionDefParams();
     CompoundStatementContext *compoundStatement();
 
@@ -886,12 +778,13 @@ public:
   public:
     CapsuleParser::TypeVarietyContext *variety = nullptr;
     CapsuleParser::CreateVarContext *field = nullptr;
+    antlr4::Token *endWord = nullptr;
     TypeLiteralContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
+    TypeVarietyContext *typeVariety();
+    antlr4::tree::TerminalNode *WORD();
     std::vector<antlr4::tree::TerminalNode *> ENDLINE();
     antlr4::tree::TerminalNode* ENDLINE(size_t i);
-    antlr4::tree::TerminalNode *WORD();
-    TypeVarietyContext *typeVariety();
     std::vector<CreateVarContext *> createVar();
     CreateVarContext* createVar(size_t i);
 

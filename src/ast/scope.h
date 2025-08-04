@@ -3,9 +3,12 @@
 #include <vector>
 
 #include "instance.h"
+#include "macros.h"
 #include "type.h"
 
 namespace ast {
+
+DECL_ID(Scope)
 
 struct Scope {
 	static constexpr u32 GLOBAL = (u32)0;

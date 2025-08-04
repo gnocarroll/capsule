@@ -2,7 +2,7 @@
 
 #include "antlr4-runtime/ANTLRInputStream.h"
 
-#include "ast/ast_builder_visitor.h"
+#include "ast/visitor/ast_builder_visitor.h"
 #include "parse/CapsuleLexer.h"
 #include "parse/CapsuleParser.h"
 
